@@ -1,510 +1,799 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>What We Do - Project 100 Youth Empowerment</title>
+    <title>What We Do - Project 100 | Empowering Underprivileged Youth</title>
     <link rel="icon" type="image/png" sizes="32x32" href="p (5).jpeg">
 
-    <!-- Third Party Plugins -->
-    <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700;900&family=Six+Caps&display=swap" rel="stylesheet">
-    <!-- custom style -->
-    <link rel="stylesheet" href="style.css">
-
-  </head>
-  <body data-bs-theme="dark">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <div class="nav nav-overlay">
-      <div class="nav__content">
-        <ul class="nav__list">
-          <li class="nav__list-item"><a href="index.html" class="hover-target">Home</a></li>
-          <li class="nav__list-item"><a href="about.html" class="hover-target">About Us</a></li>
-          <li class="nav__list-item active-nav"><a href="what-we-do.html" class="hover-target">What We Do</a></li>
-          <li class="nav__list-item"><a href="blessedfeet.html" class="hover-target">BlessedFeet Initiative</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1" class="hover-target">Training Application</a></li>
-          <li class="nav__list-item"><a href="media.html" class="hover-target">Media Hub</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform " class="hover-target">Get Involved</a></li>
-          <li class="nav__list-item"><a href="donate.html" class="hover-target">Donate </a></li>
-          <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact Us</a></li>
-        </ul>
+    <style>
+      :root {
+        --primary-red: #e30613;
+        --dark-red: #c00511;
+        --light-red: #ff4d4d;
+        --white: #ffffff;
+        --light-gray: #f8f9fa;
+        --medium-gray: #e9ecef;
+        --dark-gray: #495057;
+        --black: #212529;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        background-color: var(--white);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+      
+      .navbar {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-red) !important;
+        font-size: 1.8rem;
+      }
+      
+      .nav-link {
+        color: var(--dark-gray) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        margin: 0 0.2rem;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+      }
+      
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--dark-red);
+        border-color: var(--dark-red);
+      }
+      
+      .btn-outline-primary {
+        color: var(--primary-red);
+        border-color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .btn-outline-primary:hover {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+      }
+      
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.dineandpack.com.ng/forms/sep7-27.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 8rem 0;
+        text-align: center;
+      }
+      
+      .section-title {
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-red);
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-red);
+      }
+      
+      .impact-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        margin-bottom: 1rem;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      
+      .card-icon {
+        font-size: 2.5rem;
+        color: var(--primary-red);
+        margin-bottom: 1.5rem;
+      }
+      
+      .bg-light-red {
+        background-color: rgba(227, 6, 19, 0.05);
+      }
+      
+      .footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 4rem 0 2rem;
+      }
+      
+      .footer-links h5 {
+        color: var(--white);
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .footer-links a {
+        color: var(--medium-gray);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+      }
+      
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+      
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255,255,255,0.1);
+        color: var(--white);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        background-color: var(--primary-red);
+        transform: translateY(-3px);
+      }
+      
+      .testimonial-card {
+        background-color: var(--white);
+        border-left: 4px solid var(--primary-red);
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      }
+      
+      .testimonial-author {
+        color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .partner-logo {
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      
+      .partner-logo:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+      
+      .cta-section {
+        background: linear-gradient(rgba(227, 6, 19, 0.9), rgba(227, 6, 19, 0.9)), url('vj (3).webp');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 5rem 0;
+        text-align: center;
+      }
+      
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+      }
+      
+      .breadcrumb-item a {
+        color: var(--dark-gray);
+        text-decoration: none;
+      }
+      
+      .breadcrumb-item.active {
+        color: var(--primary-red);
+      }
+      
+      .breadcrumb-item+.breadcrumb-item::before {
+        content: ">";
+      }
+      
+      .program-card {
+        height: 100%;
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--primary-red);
+      }
+      
+      .program-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .program-icon {
+        color: var(--primary-red);
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 5rem 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Project<span style="color: var(--black)">100</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="what-we-do.html">Our Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blessedfeet.html">BlessedFeet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media.html">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary" href="donate.html">Donate Now</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-    <nav id="navbar" class="position-absolute">
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-btn" for="menu-toggle">
-      <span></span>
-      </label>
     </nav>
 
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Sidebar -->
-        <div class="col-lg-3 position-fixed z-1 h-100" data-aos="slide-right" data-aos-delay="200">
-          <div class="sidebar p-4 p-lg-5 vh-100 d-flex flex-column position-relative">
-            <a href="index.html" class="logo mb-0 text-decoration-none">Project100.</a>
-            <p class="bio mt-4 d-none d-lg-block" style="max-width: 200px;">
-              Empowering underprivileged youth through targeted training, mentorship, and capacity-building programs to unlock their potential and enable meaningful contributions to society.
-            </p>
-            <p style="max-width: 200px;">A CSR initiative of <a href="https://www.dineandpack.com.ng/" target="_blank" class="text-decoration-none">Dine & Pack</a></p>
-            
-            <div class="social-icons mt-auto mb-4 d-none d-lg-flex flex-column">
-              <a href="https://www.instagram.com/project_1hundredd/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/project-1hundred" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://x.com/Project_100hund" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-            
-            <div class="personal-info d-none d-lg-flex">
-              <p class="job-title mb-2">YOUTH EMPOWERMENT INITIATIVE</p>
-              <p class="location">NIGERIA</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-9 offset-lg-3">
-          <div class="row">
-            
-            <!-- Hero Section -->
-            <section id="what-we-do-hero" class="col-12 position-relative vh-100 d-flex align-items-center">
-              <div class="pt-4 pt-lg-5 px-4 px-lg-5 w-100">
-                <div class="row">
-                  <div class="col-lg-8">
-                    <span class="introduction mb-3 d-block">OUR PROGRAMS</span>
-                    <h1 class="name mb-4 txt-fx slide-up text-uppercase">What We Do</h1>
-                    <p class="lead mb-5">
-                      Project100 implements targeted interventions across six key program areas designed to empower underprivileged youth and transform underserved communities in Nigeria.
-                    </p>
-                    <a href="#programs" class="cta-link d-inline-block">Explore Our Programs</a>
-                  </div>
-                </div>
-              </div>
-              <img src="https://www.dineandpack.com.ng/forms/sep7-27.jpg" alt="Project100 Programs" class="hero-image position-absolute top-0 end-0 img-fluid mb-5 opacity-25 vh-100">
-            </section>
-
-            <!-- Programs Overview -->
-            <section id="programs" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row mb-5">
-                <div class="col-lg-12" data-aos="fade-up">
-                  <span class="introduction mb-3 d-block">OUR APPROACH</span>
-                  <h2 class="name mb-4 txt-fx slide-up text-uppercase">Comprehensive Youth Empowerment</h2>
-                  <p class="lead">
-                    We address the multifaceted challenges facing underprivileged youth through a holistic model that combines skills development, education support, mentorship, and community engagement.
-                  </p>
-                </div>
-              </div>
-              
-              <div class="row g-4">
-                <!-- Skill Acquisition -->
-                <div class="col-lg-4" data-aos="fade-up">
-                  <div class="program-card h-100 p-4 bg-dark rounded">
-                    <div class="program-icon mb-4">
-                      <i class="fas fa-hands-helping fa-3x"></i>
-                    </div>
-                    <h3>Skill Acquisition & Empowerment</h3>
-                    <p>
-                      Vocational training programs in various trades to equip youth with marketable skills for employment and entrepreneurship.
-                    </p>
-                    <ul class="program-features">
-                      <li>3-6 month intensive training programs</li>
-                      <li>Courses in culinary arts, fashion design, ICT, and more</li>
-                      <li>Hands-on practical training</li>
-                      <li>Industry-recognized certifications</li>
-                    </ul>
-                    <a href="#skill-acquisition" class="cta-link d-inline-block mt-3">Learn More</a>
-                  </div>
-                </div>
-                
-                <!-- Educational Support -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                  <div class="program-card h-100 p-4 bg-dark rounded">
-                    <div class="program-icon mb-4">
-                      <i class="fas fa-graduation-cap fa-3x"></i>
-                    </div>
-                    <h3>Educational Support</h3>
-                    <p>
-                      Programs to keep disadvantaged youth in school and improve their academic performance.
-                    </p>
-                    <ul class="program-features">
-                      <li>Scholarships for secondary and vocational education</li>
-                      <li>School supplies distribution</li>
-                      <li>After-school tutoring programs</li>
-                      <li>Digital literacy training</li>
-                    </ul>
-                    <a href="#educational-support" class="cta-link d-inline-block mt-3">Learn More</a>
-                  </div>
-                </div>
-                
-                <!-- Mentorship -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                  <div class="program-card h-100 p-4 bg-dark rounded">
-                    <div class="program-icon mb-4">
-                      <i class="fas fa-user-tie fa-3x"></i>
-                    </div>
-                    <h3>Mentorship & Capacity Building</h3>
-                    <p>
-                      One-on-one guidance and professional development to help youth navigate career paths.
-                    </p>
-                    <ul class="program-features">
-                      <li>Career counseling sessions</li>
-                      <li>Professional skills workshops</li>
-                      <li>Industry expert mentorship</li>
-                      <li>Leadership development</li>
-                    </ul>
-                    <a href="#mentorship" class="cta-link d-inline-block mt-3">Learn More</a>
-                  </div>
-                </div>
-                
-                <!-- Business Support -->
-                <div class="col-lg-4" data-aos="fade-up">
-                  <div class="program-card h-100 p-4 bg-dark rounded">
-                    <div class="program-icon mb-4">
-                      <i class="fas fa-briefcase fa-3x"></i>
-                    </div>
-                    <h3>Business Support</h3>
-                    <p>
-                      Resources and training to help young entrepreneurs launch and grow sustainable businesses.
-                    </p>
-                    <ul class="program-features">
-                      <li>Startup kits and toolkits</li>
-                      <li>Micro-grants and seed funding</li>
-                      <li>Business management training</li>
-                      <li>Financial literacy workshops</li>
-                    </ul>
-                    <a href="#business-support" class="cta-link d-inline-block mt-3">Learn More</a>
-                  </div>
-                </div>
-                
-                <!-- Community Outreach -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                  <div class="program-card h-100 p-4 bg-dark rounded">
-                    <div class="program-icon mb-4">
-                      <i class="fas fa-people-group fa-3x"></i>
-                    <div class="icon-bg"></div>
-                    </div>
-                    <h3>Community Outreach</h3>
-                    <p>
-                      Direct interventions in underserved communities including IDP camps across Nigeria.
-                    </p>
-                    <ul class="program-features">
-                      <li>Charity fairs and relief distribution</li>
-                      <li>Community skills training</li>
-                      <li>Health and hygiene initiatives</li>
-                      <li>Advocacy and awareness campaigns</li>
-                    </ul>
-                    <a href="#community-outreach" class="cta-link d-inline-block mt-3">Learn More</a>
-                  </div>
-                </div>
-                
-                <!-- Vocational Placement -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                  <div class="program-card h-100 p-4 bg-dark rounded">
-                    <div class="program-icon mb-4">
-                      <i class="fas fa-suitcase fa-3x"></i>
-                    </div>
-                    <h3>Vocational Placement</h3>
-                    <p>
-                      Connecting trained individuals with employment and apprenticeship opportunities.
-                    </p>
-                    <ul class="program-features">
-                      <li>Job placement assistance</li>
-                      <li>Apprenticeship matching</li>
-                      <li>Internship programs</li>
-                      <li>Employer partnerships</li>
-                    </ul>
-                    <a href="#vocational-placement" class="cta-link d-inline-block mt-3">Learn More</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Program Details Sections -->
-            <!-- Skill Acquisition Details -->
-            <section id="skill-acquisition" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5 bg-dark">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                  <img src="https://www.dineandpack.com.ng/forms/sep7-13.jpg" alt="Skill Acquisition Program" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6">
-                 
-                  <p>
-                    Our flagship vocational training programs provide underprivileged youth with practical, market-relevant skills that lead to employment or entrepreneurship opportunities. We focus on high-demand sectors with strong income-generating potential.
-                  </p>
-                  <div class="program-highlights mt-4">
-                    <h4 class="mb-3">Program Highlights:</h4>
-                    <ul>
-                      <li><strong>Culinary Arts Training:</strong> 3-month intensive program covering food preparation, safety, and small business management</li>
-                      <li><strong>Fashion Design:</strong> 6-month program teaching pattern making, sewing, and fashion entrepreneurship</li>
-                      <li><strong>ICT Skills:</strong> Computer literacy, graphic design, and basic coding workshops</li>
-                      <li><strong>Artisan Training:</strong> Carpentry, electrical works, and other trade skills</li>
-                    </ul>
-                  </div>
-                  <div class="mt-4">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1" class="btn btn-light me-2">Apply Now</a>
-                    <a href="#programs" class="btn btn-outline-light">All Programs</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Educational Support Details -->
-            <section id="educational-support" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
-                  <img src="https://www.dineandpack.com.ng/z%20(12).jpg" alt="Educational Support Program" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                  <span class="introduction mb-3 d-block">EDUCATION INITIATIVES</span>
-              
-                  <p>
-                    We believe education is the foundation for breaking the cycle of poverty. Our educational support initiatives address barriers to learning faced by underprivileged youth through comprehensive interventions.
-                  </p>
-                  <div class="program-highlights mt-4">
-                    <h4 class="mb-3">Key Initiatives:</h4>
-                    <ul>
-                      <li><strong>Back-to-School Drives:</strong> Providing school supplies, uniforms, and shoes to children in need</li>
-                      <li><strong>Scholarship Program:</strong> Financial support for promising students to complete their education</li>
-                      <li><strong>After-School Academy:</strong> Tutoring and homework help for at-risk students</li>
-                      <li><strong>Digital Literacy Labs:</strong> Equipping youth with essential computer skills</li>
-                      <li><strong>BlessedFeet Initiative:</strong> Providing quality school shoes to improve attendance and comfort</li>
-                    </ul>
-                  </div>
-                  <div class="mt-4">
-                    <a href="blessedfeet.html" class="btn btn-dark me-2">BlessedFeet Initiative</a>
-                    <a href="#programs" class="btn btn-outline-dark">All Programs</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Mentorship Details -->
-            <section id="mentorship" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5 bg-dark">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                  <img src="https://www.dineandpack.com.ng/forms/sep7-40.jpg" alt="Mentorship Program" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6">
-                  <span class="introduction mb-3 d-block">PERSONAL DEVELOPMENT</span>
-              
-                  <p>
-                    Beyond technical skills, we provide guidance and personal development opportunities to help youth navigate challenges and make informed life choices. Our mentorship programs connect participants with experienced professionals who provide guidance, support, and networking opportunities.
-                  </p>
-                  <div class="program-highlights mt-4">
-                    <h4 class="mb-3">Program Components:</h4>
-                    <ul>
-                      <li><strong>One-on-One Mentoring:</strong> Personalized guidance from industry professionals</li>
-                      <li><strong>Career Workshops:</strong> Resume writing, interview skills, and professional etiquette</li>
-                      <li><strong>Soft Skills Training:</strong> Communication, teamwork, and problem-solving</li>
-                      <li><strong>Leadership Development:</strong> Building confidence and decision-making abilities</li>
-                      <li><strong>Life Skills:</strong> Financial literacy, time management, and emotional intelligence</li>
-                    </ul>
-                  </div>
-                  <div class="mt-4">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-light me-2">Become a Mentor</a>
-                    <a href="#programs" class="btn btn-outline-light">All Programs</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Business Support Details -->
-            <section id="business-support" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
-                  <img src="https://www.dineandpack.com.ng/forms/sep7-11.jpg" alt="Business Support Program" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                  <span class="introduction mb-3 d-block">ENTREPRENEURSHIP</span>
-              
-                  <p>
-                    For youth interested in entrepreneurship, we provide the tools, training, and resources needed to launch and sustain micro-businesses. Our business support programs help transform skills into sustainable income-generating activities.
-                  </p>
-                  <div class="program-highlights mt-4">
-                    <h4 class="mb-3">Support Services:</h4>
-                    <ul>
-                      <li><strong>Startup Kits:</strong> Essential tools and equipment to begin working</li>
-                      <li><strong>Micro-Grants:</strong> Seed funding for promising business ideas</li>
-                      <li><strong>Business Training:</strong> Business planning, marketing, and financial management</li>
-                      <li><strong>Market Linkages:</strong> Connecting entrepreneurs with potential customers</li>
-                      <li><strong>Ongoing Coaching:</strong> Continuous support during the critical first year</li>
-                    </ul>
-                  </div>
-                  <div class="mt-4">
-                    <a href="donate.html" class="btn btn-dark me-2">Support an Entrepreneur</a>
-                    <a href="#programs" class="btn btn-outline-dark">All Programs</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Community Outreach Details -->
-            <section id="community-outreach" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5 bg-dark">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                  <img src="z2.jpg" alt="Community Outreach Program" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6">
-                  <span class="introduction mb-3 d-block">COMMUNITY IMPACT</span>
-             
-                  <p>
-                    We extend our impact beyond individual beneficiaries to entire communities through targeted outreach programs. Our community interventions address immediate needs while building long-term capacity.
-                  </p>
-                  <div class="program-highlights mt-4">
-                    <h4 class="mb-3">Outreach Activities:</h4>
-                    <ul>
-                      <li><strong>Charity Fairs:</strong> Periodic events providing free goods and services to underserved communities</li>
-                      <li><strong>IDP Camp Support:</strong> Essential supplies and skills training for displaced persons</li>
-                      <li><strong>Community Skills Training:</strong> Bringing vocational programs directly to neighborhoods</li>
-                      <li><strong>Health Initiatives:</strong> Hygiene education and basic health services</li>
-                      <li><strong>Advocacy Campaigns:</strong> Raising awareness about youth empowerment issues</li>
-                    </ul>
-                  </div>
-                  <div class="mt-4">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-light me-2">Volunteer for Outreach</a>
-                    <a href="#programs" class="btn btn-outline-light">All Programs</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Vocational Placement Details -->
-            <section id="vocational-placement" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
-                  <img src="sep7-38.jpg" alt="Vocational Placement Program" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                  <span class="introduction mb-3 d-block">EMPLOYMENT SUPPORT</span>
-                
-                  <p>
-                    Completing training is just the first step - we help graduates transition into the workforce through our vocational placement services. We bridge the gap between skilled youth and employment opportunities.
-                  </p>
-                  <div class="program-highlights mt-4">
-                    <h4 class="mb-3">Placement Services:</h4>
-                    <ul>
-                      <li><strong>Job Matching:</strong> Connecting graduates with employers in their field</li>
-                      <li><strong>Apprenticeships:</strong> Placement with master craftspeople for further skills development</li>
-                      <li><strong>Internships:</strong> Short-term work experience opportunities</li>
-                      <li><strong>Employer Partnerships:</strong> Building relationships with companies committed to hiring our graduates</li>
-                      <li><strong>Alumni Network:</strong> Ongoing support and networking opportunities</li>
-                    </ul>
-                  </div>
-                  <div class="mt-4">
-                    <a href="contact.html" class="btn btn-dark me-2">Hire a Graduate</a>
-                    <a href="#programs" class="btn btn-outline-dark">All Programs</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Impact Section -->
-            <section id="impact" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5 bg-dark">
-              <div class="row mb-5">
-                <div class="col-lg-12 text-center">
-                  <span class="introduction mb-3 d-block">OUR IMPACT</span>
-                  <h2 class="name mb-4 txt-fx slide-up text-uppercase">Transforming Lives, Building Futures</h2>
-                </div>
-              </div>
-              <div class="row g-4">
-                <div class="col-lg-4 text-center" data-aos="fade-up">
-                  <div class="impact-stat">
-                    <span class="counter" data-target="2000">0</span><span>+</span>
-                    <h4>Lives Impacted</h4>
-                    <p>Individuals empowered through our programs</p>
-                  </div>
-                </div>
-                <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-delay="100">
-                  <div class="impact-stat">
-                    <span>50</span><span>+</span>
-                    <h4>Volunteers</h4>
-                    <p>Professionals sharing their expertise</p>
-                  </div>
-                </div>
-                <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-delay="200">
-                  <div class="impact-stat">
-                    <span>15</span><span>+</span>
-                    <h4>Communities Reached</h4>
-                    <p>Including IDP camps across Nigeria</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-5">
-                <div class="col-lg-12 text-center">
-                  <a href="media.html" class="btn btn-light">See Our Impact Stories</a>
-                </div>
-              </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section id="cta" class="pt-4 pt-lg-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                  <h2 class="mb-4">Join Us in Empowering Nigeria's Youth</h2>
-                  <p class="lead mb-5">
-                    Whether you want to support our programs, volunteer your expertise, or partner with us, there are many ways to get involved and make a difference.
-                  </p>
-                  <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="donate.html" class="btn btn-dark px-4">Donate Now</a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-outline-dark px-4">Volunteer</a>
-                    <a href="contact.html" class="btn btn-outline-dark px-4">Partner With Us</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-          </div>
-        </div>
-
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Our Programs</h1>
+        <p class="lead mb-5">Project100 implements targeted interventions across six key program areas designed to empower underprivileged youth and transform underserved communities in Nigeria.</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Our Programs</li>
+          </ol>
+        </nav>
       </div>
-    </div>
+    </section>
+
+    <!-- Programs Overview -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Our Approach</span>
+          <h2 class="section-title mb-4">Comprehensive Youth Empowerment</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">
+            We address the multifaceted challenges facing underprivileged youth through a holistic model that combines skills development, education support, mentorship, and community engagement.
+          </p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Skill Acquisition -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 program-card">
+              <div class="card-body p-4">
+                <div class="program-icon mb-4">
+                  <i class="fas fa-hands-helping fa-3x"></i>
+                </div>
+                <h3>Skill Acquisition & Empowerment</h3>
+                <p>
+                  Vocational training programs in various trades to equip youth with marketable skills for employment and entrepreneurship.
+                </p>
+                <ul class="mb-0">
+                  <li>3-6 month intensive training programs</li>
+                  <li>Courses in culinary arts, fashion design, ICT, and more</li>
+                  <li>Hands-on practical training</li>
+                  <li>Industry-recognized certifications</li>
+                </ul>
+                <a href="#skill-acquisition" class="btn btn-link ps-0 text-primary-red mt-3">Learn More →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Educational Support -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 program-card">
+              <div class="card-body p-4">
+                <div class="program-icon mb-4">
+                  <i class="fas fa-graduation-cap fa-3x"></i>
+                </div>
+                <h3>Educational Support</h3>
+                <p>
+                  Programs to keep disadvantaged youth in school and improve their academic performance.
+                </p>
+                <ul class="mb-0">
+                  <li>Scholarships for secondary and vocational education</li>
+                  <li>School supplies distribution</li>
+                  <li>After-school tutoring programs</li>
+                  <li>Digital literacy training</li>
+                </ul>
+                <a href="#educational-support" class="btn btn-link ps-0 text-primary-red mt-3">Learn More →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mentorship -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 program-card">
+              <div class="card-body p-4">
+                <div class="program-icon mb-4">
+                  <i class="fas fa-user-tie fa-3x"></i>
+                </div>
+                <h3>Mentorship & Capacity Building</h3>
+                <p>
+                  One-on-one guidance and professional development to help youth navigate career paths.
+                </p>
+                <ul class="mb-0">
+                  <li>Career counseling sessions</li>
+                  <li>Professional skills workshops</li>
+                  <li>Industry expert mentorship</li>
+                  <li>Leadership development</li>
+                </ul>
+                <a href="#mentorship" class="btn btn-link ps-0 text-primary-red mt-3">Learn More →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Business Support -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 program-card">
+              <div class="card-body p-4">
+                <div class="program-icon mb-4">
+                  <i class="fas fa-briefcase fa-3x"></i>
+                </div>
+                <h3>Business Support</h3>
+                <p>
+                  Resources and training to help young entrepreneurs launch and grow sustainable businesses.
+                </p>
+                <ul class="mb-0">
+                  <li>Startup kits and toolkits</li>
+                  <li>Micro-grants and seed funding</li>
+                  <li>Business management training</li>
+                  <li>Financial literacy workshops</li>
+                </ul>
+                <a href="#business-support" class="btn btn-link ps-0 text-primary-red mt-3">Learn More →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Community Outreach -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 program-card">
+              <div class="card-body p-4">
+                <div class="program-icon mb-4">
+                  <i class="fas fa-people-group fa-3x"></i>
+                </div>
+                <h3>Community Outreach</h3>
+                <p>
+                  Direct interventions in underserved communities including IDP camps across Nigeria.
+                </p>
+                <ul class="mb-0">
+                  <li>Charity fairs and relief distribution</li>
+                  <li>Community skills training</li>
+                  <li>Health and hygiene initiatives</li>
+                  <li>Advocacy and awareness campaigns</li>
+                </ul>
+                <a href="#community-outreach" class="btn btn-link ps-0 text-primary-red mt-3">Learn More →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Vocational Placement -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 program-card">
+              <div class="card-body p-4">
+                <div class="program-icon mb-4">
+                  <i class="fas fa-suitcase fa-3x"></i>
+                </div>
+                <h3>Vocational Placement</h3>
+                <p>
+                  Connecting trained individuals with employment and apprenticeship opportunities.
+                </p>
+                <ul class="mb-0">
+                  <li>Job placement assistance</li>
+                  <li>Apprenticeship matching</li>
+                  <li>Internship programs</li>
+                  <li>Employer partnerships</li>
+                </ul>
+                <a href="#vocational-placement" class="btn btn-link ps-0 text-primary-red mt-3">Learn More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Details Sections -->
+    <!-- Skill Acquisition Details -->
+    <section id="skill-acquisition" class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <img src="https://www.dineandpack.com.ng/forms/sep7-13.jpg" alt="Skill Acquisition Program" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">Skill Acquisition & Empowerment</h2>
+            <p>
+              Our flagship vocational training programs provide underprivileged youth with practical, market-relevant skills that lead to employment or entrepreneurship opportunities. We focus on high-demand sectors with strong income-generating potential.
+            </p>
+            <div class="mt-4">
+              <h5>Program Highlights:</h5>
+              <ul>
+                <li><strong>Culinary Arts Training:</strong> 3-month intensive program covering food preparation, safety, and small business management</li>
+                <li><strong>Fashion Design:</strong> 6-month program teaching pattern making, sewing, and fashion entrepreneurship</li>
+                <li><strong>ICT Skills:</strong> Computer literacy, graphic design, and basic coding workshops</li>
+                <li><strong>Artisan Training:</strong> Carpentry, electrical works, and other trade skills</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1" class="btn btn-primary me-2">Apply Now</a>
+              <a href="#programs" class="btn btn-outline-primary">All Programs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Support Details -->
+    <section id="educational-support" class="py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
+            <img src="https://www.dineandpack.com.ng/z%20(12).jpg" alt="Educational Support Program" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="section-title mb-4">Educational Support</h2>
+            <p>
+              We believe education is the foundation for breaking the cycle of poverty. Our educational support initiatives address barriers to learning faced by underprivileged youth through comprehensive interventions.
+            </p>
+            <div class="mt-4">
+              <h5>Key Initiatives:</h5>
+              <ul>
+                <li><strong>Back-to-School Drives:</strong> Providing school supplies, uniforms, and shoes to children in need</li>
+                <li><strong>Scholarship Program:</strong> Financial support for promising students to complete their education</li>
+                <li><strong>After-School Academy:</strong> Tutoring and homework help for at-risk students</li>
+                <li><strong>Digital Literacy Labs:</strong> Equipping youth with essential computer skills</li>
+                <li><strong>BlessedFeet Initiative:</strong> Providing quality school shoes to improve attendance and comfort</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="blessedfeet.html" class="btn btn-primary me-2">BlessedFeet Initiative</a>
+              <a href="#programs" class="btn btn-outline-primary">All Programs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentorship Details -->
+    <section id="mentorship" class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <img src="https://www.dineandpack.com.ng/forms/sep7-40.jpg" alt="Mentorship Program" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">Mentorship & Capacity Building</h2>
+            <p>
+              Beyond technical skills, we provide guidance and personal development opportunities to help youth navigate challenges and make informed life choices. Our mentorship programs connect participants with experienced professionals who provide guidance, support, and networking opportunities.
+            </p>
+            <div class="mt-4">
+              <h5>Program Components:</h5>
+              <ul>
+                <li><strong>One-on-One Mentoring:</strong> Personalized guidance from industry professionals</li>
+                <li><strong>Career Workshops:</strong> Resume writing, interview skills, and professional etiquette</li>
+                <li><strong>Soft Skills Training:</strong> Communication, teamwork, and problem-solving</li>
+                <li><strong>Leadership Development:</strong> Building confidence and decision-making abilities</li>
+                <li><strong>Life Skills:</strong> Financial literacy, time management, and emotional intelligence</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-primary me-2">Become a Mentor</a>
+              <a href="#programs" class="btn btn-outline-primary">All Programs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Support Details -->
+    <section id="business-support" class="py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
+            <img src="https://www.dineandpack.com.ng/forms/sep7-11.jpg" alt="Business Support Program" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="section-title mb-4">Business Support</h2>
+            <p>
+              For youth interested in entrepreneurship, we provide the tools, training, and resources needed to launch and sustain micro-businesses. Our business support programs help transform skills into sustainable income-generating activities.
+            </p>
+            <div class="mt-4">
+              <h5>Support Services:</h5>
+              <ul>
+                <li><strong>Startup Kits:</strong> Essential tools and equipment to begin working</li>
+                <li><strong>Micro-Grants:</strong> Seed funding for promising business ideas</li>
+                <li><strong>Business Training:</strong> Business planning, marketing, and financial management</li>
+                <li><strong>Market Linkages:</strong> Connecting entrepreneurs with potential customers</li>
+                <li><strong>Ongoing Coaching:</strong> Continuous support during the critical first year</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="donate.html" class="btn btn-primary me-2">Support an Entrepreneur</a>
+              <a href="#programs" class="btn btn-outline-primary">All Programs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Outreach Details -->
+    <section id="community-outreach" class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <img src="z2.jpg" alt="Community Outreach Program" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">Community Outreach</h2>
+            <p>
+              We extend our impact beyond individual beneficiaries to entire communities through targeted outreach programs. Our community interventions address immediate needs while building long-term capacity.
+            </p>
+            <div class="mt-4">
+              <h5>Outreach Activities:</h5>
+              <ul>
+                <li><strong>Charity Fairs:</strong> Periodic events providing free goods and services to underserved communities</li>
+                <li><strong>IDP Camp Support:</strong> Essential supplies and skills training for displaced persons</li>
+                <li><strong>Community Skills Training:</strong> Bringing vocational programs directly to neighborhoods</li>
+                <li><strong>Health Initiatives:</strong> Hygiene education and basic health services</li>
+                <li><strong>Advocacy Campaigns:</strong> Raising awareness about youth empowerment issues</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-primary me-2">Volunteer for Outreach</a>
+              <a href="#programs" class="btn btn-outline-primary">All Programs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vocational Placement Details -->
+    <section id="vocational-placement" class="py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
+            <img src="sep7-38.jpg" alt="Vocational Placement Program" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="section-title mb-4">Vocational Placement</h2>
+            <p>
+              Completing training is just the first step - we help graduates transition into the workforce through our vocational placement services. We bridge the gap between skilled youth and employment opportunities.
+            </p>
+            <div class="mt-4">
+              <h5>Placement Services:</h5>
+              <ul>
+                <li><strong>Job Matching:</strong> Connecting graduates with employers in their field</li>
+                <li><strong>Apprenticeships:</strong> Placement with master craftspeople for further skills development</li>
+                <li><strong>Internships:</strong> Short-term work experience opportunities</li>
+                <li><strong>Employer Partnerships:</strong> Building relationships with companies committed to hiring our graduates</li>
+                <li><strong>Alumni Network:</strong> Ongoing support and networking opportunities</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="contact.html" class="btn btn-primary me-2">Hire a Graduate</a>
+              <a href="#programs" class="btn btn-outline-primary">All Programs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-5 bg-primary-red text-white">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-4">Our Impact</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">
+            Transforming Lives, Building Futures
+          </p>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4 mb-5 mb-md-0">
+            <div class="impact-number" data-target="2000">0</div><span class="display-4">+</span>
+            <h4>Lives Impacted</h4>
+            <p>Individuals empowered through our programs</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-md-0">
+            <div class="impact-number">50</div><span class="display-4">+</span>
+            <h4>Volunteers</h4>
+            <p>Professionals sharing their expertise</p>
+          </div>
+          <div class="col-md-4">
+            <div class="impact-number">15</div><span class="display-4">+</span>
+            <h4>Communities Reached</h4>
+            <p>Including IDP camps across Nigeria</p>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="media.html" class="btn btn-light">See Our Impact Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-4">Join Us in Empowering Nigeria's Youth</h2>
+            <p class="lead mb-5">
+              Whether you want to support our programs, volunteer your expertise, or partner with us, there are many ways to get involved and make a difference.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="donate.html" class="btn btn-light btn-lg">Donate Now</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-outline-light btn-lg">Volunteer</a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg">Partner With Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Project100</h5>
+            <p>Empowering underprivileged youth through targeted training, mentorship, and capacity-building programs to unlock their potential and enable meaningful contributions to society.</p>
+            <div class="social-icons mt-4">
+              <a href="https://www.instagram.com/project_1hundredd/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/project-1hundred" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://x.com/Project_100hund" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="what-we-do.html">Our Programs</a></li>
+              <li><a href="blessedfeet.html">BlessedFeet</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Get Involved</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="donate.html">Donate</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform">Volunteer</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1">Apply for Training</a></li>
+              <li><a href="contact.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Contact Information</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="fas fa-map-marker-alt me-2"></i> 14b, Accra Street, Wuse Zone 5, Abuja</li>
+              <li><i class="fas fa-envelope me-2"></i> Project100@gmail.com</li>
+              <li><i class="fas fa-phone me-2"></i> 08087630000, 07036414313</li>
+            </ul>
+            <div class="mt-4">
+              <a href="donate.html" class="btn btn-primary">Donate Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+        
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2023 Project100. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">A CSR initiative of <a href="https://www.dineandpack.com.ng/" class="text-white">Dine & Pack</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
     
     <!-- Counter Animation Script -->
     <script>
-      // Counter animation
-      const counters = document.querySelectorAll('.counter');
-      const speed = 200;
-      
-      function animateCounters() {
+      // Counter animation for impact numbers
+      document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.impact-number');
+        const speed = 200;
+        
+        function animateCounters() {
+          counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target') || +counter.innerText;
+            const count = +counter.dataset.count || 0;
+            const increment = target / speed;
+            
+            if(count < target) {
+              counter.dataset.count = Math.ceil(count + increment);
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(animateCounters, 1);
+            } else {
+              counter.innerText = target;
+            }
+          });
+        }
+        
+        // Start animation when element is in viewport
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) {
+              animateCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.5});
+        
         counters.forEach(counter => {
-          const target = +counter.getAttribute('data-target');
-          const count = +counter.innerText;
-          const increment = target / speed;
-          
-          if(count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(animateCounters, 1);
-          } else {
-            counter.innerText = target + '+';
-          }
+          counter.dataset.count = 0;
+          observer.observe(counter);
         });
-      }
-      
-      // Start animation when element is in viewport
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            animateCounters();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {threshold: 0.5});
-      
-      counters.forEach(counter => {
-        observer.observe(counter);
       });
     </script>
-
   </body>
 </html>
