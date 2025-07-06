@@ -3,251 +3,733 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Project 100 - Empowering Underprivileged Youth</title>
+    <title>About Us - Project 100 | Empowering Underprivileged Youth</title>
     <link rel="icon" type="image/png" sizes="32x32" href="p (5).jpeg">
 
-    <!-- Third Party Plugins -->
-    <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700;900&family=Six+Caps&display=swap" rel="stylesheet">
-    <!-- custom style -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body data-bs-theme="dark">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <div class="nav nav-overlay">
-      <div class="nav__content">
-        <ul class="nav__list">
-          <li class="nav__list-item"><a href="index.html" class="hover-target">Home</a></li>
-          <li class="nav__list-item active-nav"><a href="about.html" class="hover-target">About Us</a></li>
-          <li class="nav__list-item"><a href="what-we-do.html" class="hover-target">What We Do</a></li>
-          <li class="nav__list-item"><a href="blessedfeet.html" class="hover-target">BlessedFeet Initiative</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1" class="hover-target">Training Application</a></li>
-          <li class="nav__list-item"><a href="media.html" class="hover-target">Media Hub</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform " class="hover-target">Get Involved</a></li>
-                    <li class="nav__list-item"><a href="donate.html" class="hover-target">Donate </a></li>
-          <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact Us</a></li>
-        </ul>
+    <style>
+      :root {
+        --primary-red: #e30613;
+        --dark-red: #c00511;
+        --light-red: #ff4d4d;
+        --white: #ffffff;
+        --light-gray: #f8f9fa;
+        --medium-gray: #e9ecef;
+        --dark-gray: #495057;
+        --black: #212529;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        background-color: var(--white);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+      
+      .navbar {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-red) !important;
+        font-size: 1.8rem;
+      }
+      
+      .nav-link {
+        color: var(--dark-gray) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        margin: 0 0.2rem;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+      }
+      
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--dark-red);
+        border-color: var(--dark-red);
+      }
+      
+      .btn-outline-primary {
+        color: var(--primary-red);
+        border-color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .btn-outline-primary:hover {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+      }
+      
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.dineandpack.com.ng/forms/sep7-20.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 8rem 0;
+        text-align: center;
+      }
+      
+      .section-title {
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-red);
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-red);
+      }
+      
+      .impact-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        margin-bottom: 1rem;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      
+      .card-icon {
+        font-size: 2.5rem;
+        color: var(--primary-red);
+        margin-bottom: 1.5rem;
+      }
+      
+      .bg-light-red {
+        background-color: rgba(227, 6, 19, 0.05);
+      }
+      
+      .footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 4rem 0 2rem;
+      }
+      
+      .breadcrumb-item a {
+        color: var(--dark-gray);
+        text-decoration: none;
+      }
+      
+      .breadcrumb-item.active {
+        color: var(--primary-red);
+      }
+      
+      .breadcrumb-item+.breadcrumb-item::before {
+        content: ">";
+      }
+      
+      .team-member-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid var(--primary-red);
+        margin-bottom: 1rem;
+      }
+      
+      .founder-quote {
+        border-left: 4px solid var(--primary-red);
+        padding-left: 1.5rem;
+        font-style: italic;
+        font-size: 1.1rem;
+      }
+      
+      .timeline {
+        position: relative;
+        padding-left: 50px;
+      }
+      
+      .timeline:before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--primary-red);
+      }
+      
+      .timeline-item {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+      
+      .timeline-item:before {
+        content: '';
+        position: absolute;
+        left: -38px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 3px solid var(--primary-red);
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 5rem 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Project<span style="color: var(--black)">100</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="what-we-do.html">Our Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blessedfeet.html">BlessedFeet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media.html">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary" href="donate.html">Donate Now</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-    <nav id="navbar" class="position-absolute">
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-btn" for="menu-toggle">
-      <span></span>
-      </label>
     </nav>
 
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Sidebar -->
-        <div class="col-lg-3 position-fixed z-1 h-100" data-aos="slide-right" data-aos-delay="200">
-          <div class="sidebar p-4 p-lg-5 vh-100 d-flex flex-column position-relative">
-            <a href="index.html" class="logo mb-0 text-decoration-none">Project100.</a>
-            <p class="bio mt-4 d-none d-lg-block" style="max-width: 200px;">
-              Empowering underprivileged youth through targeted training, mentorship, and capacity-building programs to unlock their potential and enable meaningful contributions to society.
-            </p>
-            <p style="max-width: 200px;">A CSR initiative of <a href="https://www.dineandpack.com.ng/" target="_blank" class="text-decoration-none">Dine & Pack</a></p>
-            
-            <div class="social-icons mt-auto mb-4 d-none d-lg-flex flex-column">
-              <a href="https://www.instagram.com/project_1hundredd/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/project-1hundred" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://x.com/Project_100hund" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <!-- Page Header -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">About Project 100</h1>
+        <p class="lead mb-5">Empowering underprivileged youth through targeted interventions, training, and capacity-building programs</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+<!-- Our Story Section - Bento Style -->
+<section class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="row g-4 align-items-center">
+      <!-- Bento Grid Left -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <!-- Large Feature Card -->
+          <div class="col-12">
+            <div class="bento-card h-100 shadow rounded-4 overflow-hidden d-flex flex-lg-row flex-column">
+              <div class="bento-img col-lg-5 p-0">
+                <img src=" https://www.dineandpack.com.ng/forms/sep7-30.jpg" 
+                  class="img-fluid h-100 w-100 object-fit-cover" 
+                  alt="Project 100 Impact">
+              </div>
+              <div class="p-4 col-lg-7">
+                <span class="text-uppercase text-primary-red fw-bold">Our Story</span>
+                <h2 class="section-title mb-3">About Project 100</h2>
+                <p class="lead">A social impact initiative dedicated to empowering underprivileged youth and underserved communities through targeted interventions, training, and capacity-building programs.</p>
+                <p class="mb-0">Founded as a CSR initiative of Dine &amp; Pack Ltd, Project 100 has grown from a local effort to address youth unemployment into a comprehensive empowerment program reaching thousands across Nigeria and beyond.</p>
+              </div>
             </div>
-            
-            <div class="personal-info d-none d-lg-flex">
-              <p class="job-title mb-2">YOUTH EMPOWERMENT INITIATIVE</p>
-              <p class="location">NIGERIA</p>
+          </div>
+          <!-- Small Cards Row -->
+          <div class="col-6">
+            <div class="bento-card shadow rounded-4 overflow-hidden h-100">
+              <img src="https://www.dineandpack.com.ng/forms/sep7-27.jpg" 
+                class="img-fluid w-100 object-fit-cover" 
+                style="height:170px" alt="Empowerment">
+              <div class="p-3">
+                <h6 class="fw-bold mb-2 text-primary">100% Impact</h6>
+                <p class="mb-0 small">Our name reflects our commitment to creating 100% impact - transforming lives completely through holistic interventions that address education, skills development, mentorship, and economic empowerment.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bento-card shadow rounded-4 overflow-hidden h-100">
+              <img src="https://www.dineandpack.com.ng/forms/sep7-21.jpg " 
+                class="img-fluid w-100 object-fit-cover" 
+                style="height:170px" alt="Mentorship">
+              <div class="p-3">
+                <h6 class="fw-bold mb-2 text-primary">Empowering Youth</h6>
+                <p class="mb-0 small">Project 100 supports youth with mentorship and training, creating sustainable pathways out of poverty and into leadership.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-9 offset-lg-3">
-          <div class="row">
-            <!-- About Hero Section -->
-            <section id="about-hero" class="col-12 position-relative vh-100 d-flex align-items-center">
-              <div class="pt-4 pt-lg-5 px-4 px-lg-5 w-100">
-                <div class="row">
-                  <div class="col-lg-8">
-                    <span class="introduction mb-3 d-block">OUR STORY</span>
-                    <h1 class="display-3 mb-4">About Project 100</h1>
-                    <p class="lead mb-5">A social impact initiative dedicated to empowering underprivileged youth and underserved communities through targeted interventions, training, and capacity-building programs.</p>
-                 
-                  </div>
-                </div>
-              </div>
-              <img src="sep7-75.jpg" alt="Project 100 Team" class="position-absolute top-0 end-0 img-fluid h-100 opacity-25">
-            </section>
-
-            <!-- Mission & Vision Section -->
-            <section id="mission" class="pt-5 px-4 px-lg-5 my-5 py-5 bg-dark">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                  <span class="introduction mb-3 d-block">OUR PURPOSE</span>
-                  <h2 class="mb-4">Mission & Vision</h2>
-                  <p class="lead">Guiding principles that drive our commitment to transforming lives and communities.</p>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                  <div class="card bg-dark border-light mb-4">
-                    <div class="card-body p-4">
-                      <i class="fas fa-bullseye fa-3x mb-3 text-primary"></i>
-                      <h3 class="mb-3">Our Mission</h3>
-                      <p>"Empowering the underprivileged through targeted interventions, training, mentorship, and capacity-building programs. Our mission is to unlock their full potential, provide essential skills, and enable them to make meaningful contributions to their immediate societies and the world at large."</p>
-                    </div>
-                  </div>
-                  <div class="card bg-dark border-light">
-                    <div class="card-body p-4">
-                      <i class="fas fa-eye fa-3x mb-3 text-primary"></i>
-                      <h3 class="mb-3">Our Vision</h3>
-                      <p>"To create a world where every disadvantaged individual has the opportunity to thrive, empowering them with skills and support needed to overcome barriers and drive positive change in their communities."</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ED Profile Section -->
-            <section id="ed" class="pt-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row d-flex flex-wrap">
-                <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
-                  <img  style="height: 15cm;" src="t1.jpg" alt="Shetu Gamaliel" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-lg-8" data-aos="fade-left">
-                  <span class="introduction mb-3 d-block">OUR FOUNDER</span>
-                  <h2 class="mb-4">Shetu Gamaliel</h2>
-                  <p class="lead">Dynamic culinary entrepreneur, educator, and impact-driven changemaker</p>
-                  
-                  <p>Shetu Gamaliel is a dynamic culinary entrepreneur, educator, and impact-driven changemaker based in Abuja, Nigeria. With a deep passion for food, community empowerment, and youth development, she has built a multifaceted brand that reflects excellence, resilience, and compassion.</p>
-                  
-                  <p>As the founder of Dine and Pack Culinary School and Restaurant, Shetu Gamaliel has trained and mentored hundreds of aspiring chefs and food entrepreneurs. Her school is known for combining practical culinary instruction with real-world business guidance, producing graduates who are confident in both the kitchen and the marketplace.</p>
-                  
-                  <div class="accordion mt-4" id="edAccordion">
-                    <div class="accordion-item border-0 bg-transparent">
-                      <h3 class="accordion-header" id="headingOne">
-                        <button class="accordion-button bg-transparent text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Culinary Achievements
-                        </button>
-                      </h3>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#edAccordion">
-                        <div class="accordion-body">
-                          <p>Dine and Pack is more than a school—it is a launchpad for food-focused dreams. Since its inception, the school has graduated over 300 students, offering intensive short courses in African and continental cuisine, pastries, mixology, and food business management. Shetu Gamaliel has also hosted multiple food exhibitions and pop-up events to showcase her students' talents.</p>
-                          <p>Shetu Gamaliel launched the Dine and Pack Inter-School Cooking Competition, a culinary contest designed to spark interest in food entrepreneurship among teenagers. The competition brought together students from various schools to showcase their culinary talents in a friendly but professional environment.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item border-0 bg-transparent">
-                      <h3 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button bg-transparent text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Social Impact Initiatives
-                        </button>
-                      </h3>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#edAccordion">
-                        <div class="accordion-body">
-                          <p>Shetu Gamaliel is the visionary behind Project100, a social impact initiative committed to empowering underprivileged youth and underserved communities through targeted interventions. Project100 was born out of a deep desire to give back meaningfully to society.</p>
-                          <p>Key highlights include multiple outreach programs at the Zhidu community and internally displaced persons (IDP) camps, where participants benefited from both skill-building programs and critical relief items. Project100 has also conducted community orientations to promote self-reliance, financial literacy, and mental wellness among youth and women.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item border-0 bg-transparent">
-                      <h3 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-transparent text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Leadership & Recognition
-                        </button>
-                      </h3>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#edAccordion">
-                        <div class="accordion-body">
-                          <p>In her broader leadership capacity, she currently serves as the President of AWCNext (Africa Women Conference Next), a platform that amplifies the voices, ideas, and innovations of African women across sectors.</p>
-                          <p>Shetu Gamaliel's consistent efforts in education and social impact recently earned her the prestigious role of United Nations Girls and Women Speak Ambassador. This appointment recognizes her voice and leadership in championing gender equity and youth empowerment.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-        
-
-            <!-- Governance Section -->
-            <section id="governance" class="pt-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                  <span class="introduction mb-3 d-block">OUR COMMITMENT</span>
-                  <h2 class="mb-4">Governance & Transparency</h2>
-                  <p class="lead">We uphold the highest standards of accountability and ethical practices in all our operations.</p>
-                  <p>At Project 100, we are committed to upholding the highest standards of accountability, integrity, and transparency. Our programs are guided by a strong governance structure that ensures responsible decision-making, ethical practices, and effective resource management.</p>
-                  <a href="transparency.html" class="btn btn-dark mt-3">View Our Reports</a>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                  <div class="row g-4">
-                    <div class="col-md-6">
-                      <div class="card bg-dark border-light h-100">
-                        <div class="card-body p-4">
-                          <i class="fas fa-balance-scale fa-3x mb-3 text-primary"></i>
-                          <h3 class="mb-3">Accountability</h3>
-                          <p>We maintain rigorous financial controls and regular audits to ensure proper use of funds.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card bg-dark border-light h-100">
-                        <div class="card-body p-4">
-                          <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
-                          <h3 class="mb-3">Impact Measurement</h3>
-                          <p>We systematically track and report on program outcomes and beneficiary progress.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card bg-dark border-light h-100">
-                        <div class="card-body p-4">
-                          <i class="fas fa-handshake fa-3x mb-3 text-primary"></i>
-                          <h3 class="mb-3">Ethical Partnerships</h3>
-                          <p>We carefully vet all partners and collaborators to align with our values and mission.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card bg-dark border-light h-100">
-                        <div class="card-body p-4">
-                          <i class="fas fa-book fa-3x mb-3 text-primary"></i>
-                          <h3 class="mb-3">Documentation</h3>
-                          <p>Comprehensive records of all activities, expenditures, and decisions are maintained.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="py-5 px-4 px-lg-5 my-5 bg-dark text-center">
-              <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="fade-up">
-                  <h2 class="mb-4">Join Us in Making a Difference</h2>
-                  <p class="lead mb-5">Whether you want to volunteer, partner with us, or support our programs, your involvement can help transform lives and communities.</p>
-                  <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="donate.html" class="btn btn-primary px-4">Donate Now</a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform " class="btn btn-outline-light px-4">Volunteer</a>
-                    <a href="contact.html" class="btn btn-outline-light px-4">Contact Us</a>
-                  </div>
-                </div>
-              </div>
-            </section>
+      </div>
+      <!-- Bento Grid Right -->
+      <div class="col-lg-5">
+        <div class="bento-card shadow rounded-4 overflow-hidden h-100">
+          <img src="https://www.dineandpack.com.ng/forms/sep7-11.jpg " 
+            class="img-fluid w-100 object-fit-cover" 
+            style="height:280px" alt="Community">
+          <div class="p-4">
+            <h5 class="fw-bold text-primary">From Local to Global</h5>
+            <p class="mb-0">Our journey began in Abuja and now spans several states and international partnerships, aiming to impact 10,000 youth by 2025.</p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Timeline - Bento Style -->
+    
+  </div>
+</section>
+
+<!-- Bento CSS for layout (add to your CSS file or use in style tag) -->
+<style>
+.bento-card {
+  background: #fff;
+  transition: box-shadow .2s;
+}
+.bento-card:hover {
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,.10);
+}
+.bento-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+}
+.timeline-bento {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.timeline-bento-item {
+  min-width: 230px;
+  max-width: 270px;
+  flex: 1 1 230px;
+  border-left: 4px solid #d90429;
+  background: #fff;
+}
+.text-primary-red {
+  color: #d90429;
+}
+.section-title {
+  font-weight: 700;
+  color: #22223b;
+}
+</style>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Our Purpose</span>
+          <h2 class="section-title mb-4">Mission & Vision</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">Guiding principles that drive our commitment to transforming lives and communities</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-5">
+                <i class="fas fa-bullseye card-icon"></i>
+                <h3 class="mb-3">Our Mission</h3>
+                <p class="lead fst-italic">"Empowering the underprivileged through targeted interventions, training, mentorship, and capacity-building programs."</p>
+                <p>Our mission is to unlock their full potential, provide essential skills, and enable them to make meaningful contributions to their immediate societies and the world at large. We achieve this through:</p>
+                <ul>
+                  <li>Practical vocational training programs</li>
+                  <li>Comprehensive educational support</li>
+                  <li>Mentorship and personal development</li>
+                  <li>Entrepreneurship and business support</li>
+                  <li>Community-based interventions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-5">
+                <i class="fas fa-eye card-icon"></i>
+                <h3 class="mb-3">Our Vision</h3>
+                <p class="lead fst-italic">"To create a world where every disadvantaged individual has the opportunity to thrive."</p>
+                <p>We envision empowered communities where youth have the skills and support needed to overcome barriers and drive positive change. Our vision guides us to:</p>
+                <ul>
+                  <li>Break cycles of poverty through education and skills</li>
+                  <li>Create pathways to economic independence</li>
+                  <li>Foster leadership and social responsibility</li>
+                  <li>Build sustainable community development</li>
+                  <li>Promote equality of opportunity for all</li>
+                </ul>
+                <div class="founder-quote mt-4">
+                  <p>"True empowerment comes not from handouts, but from equipping individuals with the tools to transform their own lives and communities."</p>
+                  <p class="text-end fw-bold">- Shetu Gamaliel, Founder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Our Founder</span>
+          <h2 class="section-title mb-4">Shetu Gamaliel</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">Dynamic culinary entrepreneur, educator, and impact-driven changemaker</p>
+        </div>
+        
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <img src="t1.jpg" alt="Shetu Gamaliel" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-7">
+            <p>Shetu Gamaliel is a visionary leader and social entrepreneur based in Abuja, Nigeria, whose multifaceted career bridges culinary excellence and youth empowerment.</p>
+            <p>With a deep passion for food, community development, and education, she has built an inspiring legacy that combines business acumen with compassionate social impact. Her work embodies the belief that sustainable change comes from equipping individuals with both skills and opportunities.</p>
+            <p>As the founder of Dine and Pack Culinary School and Restaurant, Shetu has trained and mentored hundreds of aspiring chefs and food entrepreneurs. Her institution is renowned for its holistic approach, combining world-class culinary instruction with practical business training and personal development.</p>
+            
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <h5>Culinary Achievements</h5>
+                <ul>
+                  <li>Established premier culinary institute</li>
+                  <li>Trained 500+ professional chefs</li>
+                  <li>Pioneer in Nigerian culinary education</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Leadership & Recognition</h5>
+                <ul>
+                  <li>2022 Social Entrepreneur Award</li>
+                  <li>Featured speaker at international forums</li>
+                  <li>Advocate for women in business</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="https://www.linkedin.com/posts/shetu-gamaliel-101008216_meet-the-beneficiaries-and-trainees-of-project100-activity-7239360236640194560-xgQ3?utm_source=share&utm_medium=member_desktop&rcm=ACoAACsC-VgB-hh-xRPAHpP8dVfa8Ykx-PazyY8" class="btn btn-primary">
+                <i class="fas fa-book-open me-2"></i> Full Biography
+              </a>
+              <a href="https://www.linkedin.com/in/shetu-gamaliel-101008216/" class="btn btn-outline-primary" target="_blank">
+                <i class="fab fa-linkedin-in me-2"></i> Connect
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Our People</span>
+          <h2 class="section-title mb-4">Project 100 Team</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">Dedicated professionals and volunteers committed to youth empowerment</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img src="https://www.dineandpack.com.ng/forms/t5.jpg" alt="Team Member" class="team-member-img">
+                <h5> GABRIEL OLOWOOKERE</h5>
+                <p class="text-primary-red fw-bold">DIRECTOR DEVELOPMENT AND EVENT COORDINATION </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img src="https://www.dineandpack.com.ng/forms/t8.jpg " alt="Team Member" class="team-member-img">
+                <h5>OLUSEGUN OGUNLEYE </h5>
+                <p class="text-primary-red fw-bold">VISUAL AND MEDIA COORDINATOR </p>
+            
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img src="https://www.dineandpack.com.ng/forms/t4.jpg " alt="Team Member" class="team-member-img">
+                <h5>NAOMI OKEKE </h5>
+                <p class="text-primary-red fw-bold">DIRECTOR PHILANTHROPY </p>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <p class="mb-4">Join our team of passionate changemakers</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-primary">Volunteer With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Our Commitment</span>
+          <h2 class="section-title mb-4">Governance & Transparency</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">We uphold the highest standards of accountability and ethical practices in all our operations</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-shield-alt card-icon"></i>
+                <h5>Accountability</h5>
+                <p>We maintain rigorous financial controls and regular audits to ensure proper use of funds and resources.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h5>Impact Measurement</h5>
+                <p>We systematically track and report on program outcomes and beneficiary progress using standardized metrics.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-handshake card-icon"></i>
+                <h5>Ethical Partnerships</h5>
+                <p>We carefully vet all partners and collaborators to ensure alignment with our values and mission.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-file-alt card-icon"></i>
+                <h5>Documentation</h5>
+                <p>Comprehensive records of all activities, expenditures, and decisions are maintained for transparency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-lg-10 mx-auto">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h4 class="text-center mb-4">Our Annual Reports</h4>
+                <div class="row g-4">
+                  <div class="col-md-4">
+                    <div class="card border-0 h-100">
+                      <div class="card-body text-center">
+                        <i class="fas fa-file-pdf fa-3x text-primary-red mb-3"></i>
+                        <h5>Volunteer Handbook </h5>
+                        <a href="https://www.dineandpack.com.ng/Volunteer%20Handbook.pdf " class="btn btn-sm btn-outline-primary">Download PDF</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card border-0 h-100">
+                      <div class="card-body text-center">
+                        <i class="fas fa-file-pdf fa-3x text-primary-red mb-3"></i>
+                        <h5>ORGANOGRAM  </h5>
+                        <a href="https://www.dineandpack.com.ng/ORGANOGRAM%20(1).pdf " class="btn btn-sm btn-outline-primary">Download PDF</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card border-0 h-100">
+                      <div class="card-body text-center">
+                        <i class="fas fa-file-pdf fa-3x text-primary-red mb-3"></i>
+                        <h5>Training Application Form </h5>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1" class="btn btn-sm btn-outline-primary">Download PDF</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary-red text-white">
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <h3 class="mb-3">Join Us in Making a Difference</h3>
+            <p class="mb-0">Whether you want to volunteer, partner with us, or support our programs, your involvement can help transform lives and communities.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="donate.html" class="btn btn-light me-2">Donate Now</a>
+            <a href="contact.html" class="btn btn-outline-light">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Project100</h5>
+            <p>Empowering underprivileged youth through targeted training, mentorship, and capacity-building programs to unlock their potential and enable meaningful contributions to society.</p>
+            <div class="social-icons mt-4">
+              <a href="https://www.instagram.com/project_1hundredd/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/project-1hundred" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://x.com/Project_100hund" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="what-we-do.html">Our Programs</a></li>
+              <li><a href="blessedfeet.html">BlessedFeet</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Get Involved</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="donate.html">Donate</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform">Volunteer</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1">Apply for Training</a></li>
+              <li><a href="contact.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Contact Information</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="fas fa-map-marker-alt me-2"></i> 14b, Accra Street, Wuse Zone 5, Abuja</li>
+              <li><i class="fas fa-envelope me-2"></i> Project100@gmail.com</li>
+              <li><i class="fas fa-phone me-2"></i> 08087630000, 07036414313</li>
+            </ul>
+            <div class="mt-4">
+              <a href="donate.html" class="btn btn-primary">Donate Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+        
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2023 Project100. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">A CSR initiative of <a href="https://www.dineandpack.com.ng/" class="text-white">Dine & Pack</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
+    
+    <!-- Counter Animation Script -->
+    <script>
+      // Simple counter animation for impact numbers
+      document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.impact-number');
+        const speed = 200;
+        
+        function animateCounters() {
+          counters.forEach(counter => {
+            const target = +counter.innerText.replace('+', '');
+            const count = +counter.dataset.count || 0;
+            const increment = target / speed;
+            
+            if(count < target) {
+              counter.dataset.count = Math.ceil(count + increment);
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(animateCounters, 1);
+            } else {
+              counter.innerText = target + (counter.dataset.target === '2000' ? '+' : '');
+            }
+          });
+        }
+        
+        // Start animation when element is in viewport
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) {
+              animateCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.5});
+        
+        counters.forEach(counter => {
+          counter.dataset.count = 0;
+          observer.observe(counter.parentElement);
+        });
+      });
+    </script>
   </body>
 </html>
