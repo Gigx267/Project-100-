@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BlessedFeet Initiative - Project 100</title>
+    <title>BlessedFeet Initiative - Project 100 | Empowering Underprivileged Youth</title>
     <link rel="icon" type="image/png" sizes="32x32" href="p (5).jpeg">
 
     <!-- Bootstrap CSS -->
@@ -11,185 +11,495 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700;900&family=Six+Caps&display=swap" rel="stylesheet">
-    <!-- custom style -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body data-bs-theme="dark">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <div class="nav nav-overlay">
-      <div class="nav__content">
-        <ul class="nav__list">
-          <li class="nav__list-item"><a href="index.html" class="hover-target">Home</a></li>
-          <li class="nav__list-item"><a href="about.html" class="hover-target">About Us</a></li>
-          <li class="nav__list-item"><a href="what-we-do.html" class="hover-target">What We Do</a></li>
-          <li class="nav__list-item active-nav"><a href="blessedfeet.html" class="hover-target">BlessedFeet</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1" class="hover-target">Training</a></li>
-          <li class="nav__list-item"><a href="media.html" class="hover-target">Media</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="hover-target">Get Involved</a></li>
-          <li class="nav__list-item"><a href="donate.html" class="hover-target">Donate</a></li>
-          <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact</a></li>
-        </ul>
+    <style>
+      :root {
+        --primary-red: #e30613;
+        --dark-red: #c00511;
+        --light-red: #ff4d4d;
+        --white: #ffffff;
+        --light-gray: #f8f9fa;
+        --medium-gray: #e9ecef;
+        --dark-gray: #495057;
+        --black: #212529;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        background-color: var(--white);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+      
+      .navbar {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-red) !important;
+        font-size: 1.8rem;
+      }
+      
+      .nav-link {
+        color: var(--dark-gray) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        margin: 0 0.2rem;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+      }
+      
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--dark-red);
+        border-color: var(--dark-red);
+      }
+      
+      .btn-outline-primary {
+        color: var(--primary-red);
+        border-color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .btn-outline-primary:hover {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+      }
+      
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/webp;base64,UklGRhgFAABXRUJQVlA4IAwFAAAQKQCdASqfAQoBPp1Onk4lpCIiIChosBOJZ27gO8n8LLxPv/sseg8KJ/zxeziq8gDcpBcon4B/q6ffQL4p3/0/z/d3Ar324gBPnOSkDQ+1vTfCsbqIgvwnc76D4MtU0zifGSSBCxkhYmDIAnEaz4MWU8hB9yjaPvjLw6xOd80UAbcD0s31YkUCM0MLUgvuRPTzdElSDI+Enwm39GChAkx/gvwk/VYkP9qXqSbZ9pDPJ/cvZfj+j2e8gv9URpRb/NLL3la2nhfZkegkjmV3Bb+veW7Sf0yLM5WQeQi+p1ffO0Y72Jmfoz4mviEJFOK/OuJ86LS9u84+uFlY/t3q4YOLCxrvqbZJJIECFjI+JLISeKf+sDVeVa7lWcw7ouQYiKaaQKtjZrY/YGS5U5hun2w30WEqtSUbDpMKbxGDbpTd6L6+VvE8CP+qFY4iIAJcqYaAAP7v/j/3t5+7eJb/89+/9yv/qL1pqxbYyfuvRvI5pfpwzY+v+F/dDxBo9fS++QpikrlCv/gCYCBEnUxsSsU++hKwjWY8hVbb8ed4DiLmhpPJwWDdPa0OxMrp1Ip8VsRapKrDNtFyJEeA1SMwmDkeFZZejcktII5Ixv7wQ55ElyyUMVxDHtsz3/2T0DYACudaHH3H36ruaIXOnoTZ6tY0M81zk5jswZmSVpppi3aA33NcQdKdrmIfo7VNx319m3TBR4Am1X1pr47yqZuIXJn1tGeqG0nFYqDvLreaO7dIu92bMQXiR4dLiF0HCsFzor7oTVbkIcMX0xHCdA5NX5Y2oTDshuJaLy9bzv0kEDz8tlNUdNI6zZOrQ+jRtYvtQRXXEY2Ml60uAEzs3OeiODWL3Yx3CbxXW92FwcG0Ng/sqju5mBEXEEwDLwOGPM75OXY34BbwTMYva2AvlpSed0rDTMXFDvStrrHJUUTZ4D97Hgw+o9yaf6EWZyx210GAbRPR8LUxUvMQn82w6CuWjASSNMhAjXyaY75w1cZjIfQBd/2c/dyb6neJozRhP6wxPqUjZ64FHwNJSz/GSpAH0t8xANhdPx1/XVHD9gPa5vIpkvKFG5YUYXkeDamklNz0kV9ZDkDCDDHXT2YaKsvV117nzuCiRDqFl6xtWfPFyoj4+U9ZmVZieiIi5VSlb5FzikNa/45Pz2zfiD4p3T0wwV/pEnlfWhSFJP/8rJBpBES4Fhd0i0BMSXplOJ4zyFX00N1ZMhoENgJNNZD2GsZKDoBLaY3834Dji/Qb7/YPulGbdsmnv66g/rQZLE4JXv8XSpcP8OAsYJoVjg/MEwn8Dm4knVeZ26sdeRXsT2snoYcTEFNRUUIaUVA2ZokcJz2SPSmIIv+Qep4AtdufCUxfDsMMFWxb2zS67krsIqKuoK5sWPqJA7/FZn/IlnoV3uGgQIjtiD/gvoJF6w2evQ7uRJp/UWzkve0DCt5C1GP0DiT1jJQX0FohK0frJYzAiHfyNZwJg3x0HF61wr3AsKwr/wMPzTvNNFzANhiKF0aE2NFjTM42ggFdUgkwxWI6PY59xTUV1Xbv4fnYVhJtfmtgO4ELyZdS65SGuLmM3T6FT+89sBBktZx9YXi6pIx/YOxJxICKFML1GFCiYW2BC0yVAjcmehCFoKZpb9+HS1OOKMCV5yQ9I01UuB2Civ3q38TloWNijxB/hHWN0Y7cBktlcs5u8itpw0DN6uIBBR/b8SBYiGFlNqqYjS3gAAAAAA==');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 8rem 0;
+        text-align: center;
+      }
+      
+      .section-title {
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-red);
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-red);
+      }
+      
+      .impact-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        margin-bottom: 1rem;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      
+      .card-icon {
+        font-size: 2.5rem;
+        color: var(--primary-red);
+        margin-bottom: 1.5rem;
+      }
+      
+      .bg-light-red {
+        background-color: rgba(227, 6, 19, 0.05);
+      }
+      
+      .footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 4rem 0 2rem;
+      }
+      
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+      }
+      
+      .breadcrumb-item a {
+        color: var(--dark-gray);
+        text-decoration: none;
+      }
+      
+      .breadcrumb-item.active {
+        color: var(--primary-red);
+      }
+      
+      .breadcrumb-item+.breadcrumb-item::before {
+        content: ">";
+      }
+      
+      .stat-item {
+        display: inline-block;
+        text-align: center;
+        margin-right: 2rem;
+      }
+      
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        display: block;
+      }
+      
+      .stat-label {
+        font-size: 1rem;
+        color: var(--dark-gray);
+      }
+      
+      .feature-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .feature-list li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .feature-list li:before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: var(--primary-red);
+        position: absolute;
+        left: 0;
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 5rem 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+        }
+        
+        .stat-item {
+          display: block;
+          margin-right: 0;
+          margin-bottom: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Project<span style="color: var(--black)">100</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="what-we-do.html">Our Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="blessedfeet.html">BlessedFeet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media.html">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary" href="donate.html">Donate Now</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-    <nav id="navbar" class="position-absolute">
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-btn" for="menu-toggle">
-        <span></span>
-      </label>
     </nav>
 
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Sidebar -->
-        <div class="col-lg-3 position-fixed z-1 h-100">
-          <div class="sidebar p-4 p-lg-5 vh-100 d-flex flex-column position-relative">
-            <a href="index.html" class="logo mb-0 text-decoration-none">Project100.</a>
-            <p class="bio mt-4 d-none d-lg-block" style="max-width: 200px;">
-              Empowering underprivileged youth through education and essential support.
-            </p>
-            <p style="max-width: 200px;">A CSR initiative of <a href="https://www.dineandpack.com.ng/" target="_blank" class="text-decoration-none">Dine & Pack</a></p>
-            
-            <div class="social-icons mt-auto mb-4 d-none d-lg-flex flex-column">
-              <a href="https://www.instagram.com/project_1hundredd/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/project-1hundred" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://x.com/Project_100hund" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-            
-            <div class="personal-info d-none d-lg-flex">
-              <p class="job-title mb-2">YOUTH EMPOWERMENT INITIATIVE</p>
-              <p class="location">NIGERIA</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">BlessedFeet Initiative</h1>
+        <p class="lead mb-5">Providing quality school shoes to 100,000+ children in underserved Nigerian communities</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">BlessedFeet</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- About Initiative -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <img src="y (4).jpg" alt="Children receiving shoes" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">About BlessedFeet</h2>
+            <p>BlessedFeet is a targeted initiative to provide quality school shoes to children in underserved public schools across Nigeria. Many children attend school barefoot or with inadequate footwear, which affects their health, comfort, and school attendance.</p>
+            <p>We partner with Zujin Projects Ltd (Bata Nigeria) to produce durable, comfortable school shoes at discounted rates for distribution to children in need.</p>
+            <div class="mt-4">
+              <div class="stat-item">
+                <span class="stat-number" data-target="10000">0</span>
+                <span class="stat-label">Pairs Distributed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">25</span>
+                <span class="stat-label">Schools Reached</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-lg-9 offset-lg-3">
-          <!-- Hero Section -->
-          <section class="hero-section vh-100 d-flex align-items-center">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <h1 class="display-4 mb-4">BlessedFeet Initiative</h1>
-                  <p class="lead mb-5">Providing quality school shoes to 100,000+ children in underserved Nigerian communities</p>
-                  <a href="donate.html" class="btn btn-primary me-3">Donate Now</a>
-                  <a href="about.html" class="btn btn-outline-light">Learn More</a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- About Initiative -->
-          <section id="about" class="py-5">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                  <img src="y (4).jpg" alt="Children receiving shoes" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6">
-                  <h2 class="mb-4">About BlessedFeet</h2>
-                  <p>BlessedFeet is a targeted initiative to provide quality school shoes to children in underserved public schools across Nigeria. Many children attend school barefoot or with inadequate footwear, which affects their health, comfort, and school attendance.</p>
-                  <p>We partner with Zujin Projects Ltd (Bata Nigeria) to produce durable, comfortable school shoes at discounted rates for distribution to children in need.</p>
-                  <div class="impact-stats mt-4">
-                    <div class="stat-item">
-                      <span class="stat-number">10,000+</span>
-                      <span class="stat-label">Pairs Distributed</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number">25+</span>
-                      <span class="stat-label">Schools Reached</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-         <section id="about" class="py-5">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                  <img src="y (3).jpg" alt="Children receiving shoes" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6">
-                  <h2 class="mb-4">Why School Shoes Matter </h2>
-                  <p> Dignity & Confidence -
-Proper footwear boosts self-esteem and sense of belonging
-
-</p>
-                  <p>
-                    Improved Attendance -
-Children with proper footwear are more likely to attend school regularly <br> 
-
-Health Protection - 
-Shoes prevent injuries and parasitic infections from barefoot exposure
-                  </p>
-                  <div class="impact-stats mt-4">
-                    <div class="stat-item">
-                   
-                    </div>
-                    <div class="stat-item">
-                  
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-
-
-            <section id="about" class="py-5">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                  <img src="y (2).jpg" alt="Children receiving shoes" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6">
-                  <h2 class="mb-4">How The Initiative Works </h2>
-                  <p> Identify Schools
-We partner with local authorities to identify underserved public schools with the greatest need
-<br>
-2
-Foot Measurement
-Volunteers visit schools to measure children's feet for proper sizing
-<br>
-3
-Shoe Production
-Our manufacturing partner produces high-quality, durable school shoes
-<br>
-4
-Distribution Day
-We organize school visits to distribute shoes directly to students
-</p>
-                  <p>
-                 
-                  </p>
-                  <div class="impact-stats mt-4">
-                    <div class="stat-item">
-                   
-                    </div>
-                    <div class="stat-item">
-                  
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Footer -->
-          <footer class="py-4 text-center">
-            <p>© 2023 Project100. A CSR initiative of Dine & Pack Ltd.</p>
-          </footer>
+    <!-- Why Shoes Matter -->
+    <section class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
+            <img src="y (3).jpg" alt="Children wearing shoes" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="section-title mb-4">Why School Shoes Matter</h2>
+            <ul class="feature-list">
+              <li><strong>Dignity & Confidence:</strong> Proper footwear boosts self-esteem and sense of belonging</li>
+              <li><strong>Improved Attendance:</strong> Children with proper footwear are more likely to attend school regularly</li>
+              <li><strong>Health Protection:</strong> Shoes prevent injuries and parasitic infections from barefoot exposure</li>
+              <li><strong>Academic Performance:</strong> Comfortable students can focus better on their studies</li>
+              <li><strong>Long-term Impact:</strong> Education is the most powerful tool to break the cycle of poverty</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-4">How The Initiative Works</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">
+            Our systematic approach ensures we reach the children who need shoes the most
+          </p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="bg-primary-red text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                  <span class="h4 mb-0">1</span>
+                </div>
+                <h4>Identify Schools</h4>
+                <p>We partner with local authorities to identify underserved public schools with the greatest need</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="bg-primary-red text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                  <span class="h4 mb-0">2</span>
+                </div>
+                <h4>Foot Measurement</h4>
+                <p>Volunteers visit schools to measure children's feet for proper sizing</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="bg-primary-red text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                  <span class="h4 mb-0">3</span>
+                </div>
+                <h4>Shoe Production</h4>
+                <p>Our manufacturing partner produces high-quality, durable school shoes</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="bg-primary-red text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                  <span class="h4 mb-0">4</span>
+                </div>
+                <h4>Distribution Day</h4>
+                <p>We organize school visits to distribute shoes directly to students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <img src="y (2).jpg" alt="Shoe distribution" class="img-fluid rounded shadow" style="max-width: 800px;">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-4">Help Us Put Shoes on More Children's Feet</h2>
+            <p class="lead mb-5">
+              Your donation can provide quality school shoes and transform a child's educational experience.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="donate.html" class="btn btn-light btn-lg">Donate Now</a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg">Partner With Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Project100</h5>
+            <p>Empowering underprivileged youth through targeted training, mentorship, and capacity-building programs to unlock their potential and enable meaningful contributions to society.</p>
+            <div class="social-icons mt-4">
+              <a href="https://www.instagram.com/project_1hundredd/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/project-1hundred" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://x.com/Project_100hund" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="what-we-do.html">Our Programs</a></li>
+              <li><a href="blessedfeet.html">BlessedFeet</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Get Involved</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="donate.html">Donate</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform">Volunteer</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1">Apply for Training</a></li>
+              <li><a href="contact.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Contact Information</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="fas fa-map-marker-alt me-2"></i> 14b, Accra Street, Wuse Zone 5, Abuja</li>
+              <li><i class="fas fa-envelope me-2"></i> Project100@gmail.com</li>
+              <li><i class="fas fa-phone me-2"></i> 08087630000, 07036414313</li>
+            </ul>
+            <div class="mt-4">
+              <a href="donate.html" class="btn btn-primary">Donate Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+        
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2023 Project100. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">A CSR initiative of <a href="https://www.dineandpack.com.ng/" class="text-white">Dine & Pack</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
+    
+    <!-- Counter Animation Script -->
+    <script>
+      // Counter animation for impact numbers
+      document.addEventListener('DOMContentLoaded', function() {
+        const counter = document.querySelector('.stat-number[data-target]');
+        if (!counter) return;
+        
+        const target = +counter.getAttribute('data-target');
+        const speed = 200;
+        
+        function animateCounter() {
+          const count = +counter.dataset.count || 0;
+          const increment = target / speed;
+          
+          if(count < target) {
+            counter.dataset.count = Math.ceil(count + increment);
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(animateCounter, 1);
+          } else {
+            counter.innerText = target;
+          }
+        }
+        
+        // Start animation when element is in viewport
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) {
+              animateCounter();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.5});
+        
+        counter.dataset.count = 0;
+        observer.observe(counter);
+      });
+    </script>
   </body>
 </html>
