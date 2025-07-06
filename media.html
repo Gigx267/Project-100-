@@ -3,149 +3,800 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Media Hub - Project 100 News & Updates</title>
+    <title>Media Hub - Project 100 | News & Updates</title>
     <link rel="icon" type="image/png" sizes="32x32" href="p (5).jpeg">
 
-    <!-- Third Party Plugins -->
-    <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700;900&family=Six+Caps&display=swap" rel="stylesheet">
-    <!-- custom style -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body data-bs-theme="dark">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <div class="nav nav-overlay">
-      <div class="nav__content">
-        <ul class="nav__list">
-          <li class="nav__list-item"><a href="index.html" class="hover-target">Home</a></li>
-          <li class="nav__list-item"><a href="about.html" class="hover-target">About Us</a></li>
-          <li class="nav__list-item"><a href="what-we-do.html" class="hover-target">What We Do</a></li>
-          <li class="nav__list-item"><a href="blessedfeet.html" class="hover-target">BlessedFeet Initiative</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1" class="hover-target">Training Application</a></li>
-          <li class="nav__list-item active-nav"><a href="media.html" class="hover-target">Media Hub</a></li>
-          <li class="nav__list-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform " class="hover-target">Get Involved</a></li>
-          <li class="nav__list-item"><a href="donate.html" class="hover-target">Donate </a></li>
-          <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact Us</a></li>
-        </ul>
+    <style>
+      :root {
+        --primary-red: #e30613;
+        --dark-red: #c00511;
+        --light-red: #ff4d4d;
+        --white: #ffffff;
+        --light-gray: #f8f9fa;
+        --medium-gray: #e9ecef;
+        --dark-gray: #495057;
+        --black: #212529;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        background-color: var(--white);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+      
+      .navbar {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-red) !important;
+        font-size: 1.8rem;
+      }
+      
+      .nav-link {
+        color: var(--dark-gray) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        margin: 0 0.2rem;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+      }
+      
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--dark-red);
+        border-color: var(--dark-red);
+      }
+      
+      .btn-outline-primary {
+        color: var(--primary-red);
+        border-color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .btn-outline-primary:hover {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+      }
+      
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.dineandpack.com.ng/forms/sep7-5.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 8rem 0;
+        text-align: center;
+      }
+      
+      .section-title {
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-red);
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-red);
+      }
+      
+      .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+      
+      .card-footer {
+        background-color: var(--white);
+        border-top: 1px solid var(--medium-gray);
+        font-size: 0.9rem;
+      }
+      
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+      }
+      
+      .breadcrumb-item a {
+        color: var(--dark-gray);
+        text-decoration: none;
+      }
+      
+      .breadcrumb-item.active {
+        color: var(--primary-red);
+      }
+      
+      .breadcrumb-item+.breadcrumb-item::before {
+        content: ">";
+      }
+      
+      .media-category {
+        color: var(--primary-red);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 5rem 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Project<span style="color: var(--black)">100</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="what-we-do.html">Our Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blessedfeet.html">BlessedFeet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="media.html">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary" href="donate.html">Donate Now</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-    <nav id="navbar" class="position-absolute">
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-btn" for="menu-toggle">
-      <span></span>
-      </label>
     </nav>
 
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Sidebar -->
-        <div class="col-lg-3 position-fixed z-1 h-100" data-aos="slide-right" data-aos-delay="200">
-          <div class="sidebar p-4 p-lg-5 vh-100 d-flex flex-column position-relative">
-            <a href="index.html" class="logo mb-0 text-decoration-none">Project100.</a>
-            <p class="bio mt-4 d-none d-lg-block" style="max-width: 200px;">
-              Empowering underprivileged youth through targeted training, mentorship, and capacity-building programs to unlock their potential and enable meaningful contributions to society.
-            </p>
-            <p style="max-width: 200px;">A CSR initiative of <a href="https://www.dineandpack.com.ng/" target="_blank" class="text-decoration-none">Dine & Pack</a></p>
-            
-            <div class="social-icons mt-auto mb-4 d-none d-lg-flex flex-column">
-              <a href="https://www.instagram.com/project_1hundredd/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/project-1hundred" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://x.com/Project_100hund" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Media Hub</h1>
+        <p class="lead mb-5">Discover the latest news, press coverage, and stories from our initiatives that are transforming lives across Nigeria.</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Media</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Press Coverage Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">In The News</span>
+          <h2 class="section-title mb-4">Press Coverage</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">See how media outlets are covering our work and impact.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Press Item 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://i0.wp.com/streetreporters.ng/wp-content/uploads/2025/05/1000892252.jpg?w=1067&ssl=1" class="card-img-top" alt="Project 100 Zhidu Community Outreach">
+              <div class="card-body">
+                <span class="media-category">Featured Story</span>
+                <h3 class="card-title my-3">Project 100 Initiative Ignites Hope in Zhidu Community</h3>
+                <p class="card-text">Medical aid, empowerment programs and sustainable solutions brought to the Zhidu community through Project 100's outreach initiative.</p>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Street Reporters | May 11, 2025</small>
+                  <a href="https://streetreporters.ng/2025/05/11/project-100-initiative-ignites-hope-in-zhidu-community-with-medical-aid-empowerment-and-sustainable-solutions/" target="_blank" class="btn btn-sm btn-outline-primary">Read Article</a>
+                </div>
+              </div>
             </div>
-            
-            <div class="personal-info d-none d-lg-flex">
-              <p class="job-title mb-2">YOUTH EMPOWERMENT INITIATIVE</p>
-              <p class="location">NIGERIA</p>
+          </div>
+          
+          <!-- Press Item 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://www.nairaland.com/attachments/19299028_zhiduareaoffctabuja_jpeg63f976346405d4b0232663942abc8033" class="card-img-top" alt="Chef Mimi's Project 100">
+              <div class="card-body">
+                <span class="media-category">Feature Story</span>
+                <h3 class="card-title my-3">Chef Mimi's Project 100 Takes Empowerment to New Heights</h3>
+                <p class="card-text">Feature on how Shetu Gamaliel's Project 100 is transforming lives through skills acquisition and mentorship programs.</p>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Nairaland | April 28, 2025</small>
+                  <a href="https://www.nairaland.com/8431510/chef-mimis-project-100-takes" target="_blank" class="btn btn-sm btn-outline-primary">Read Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Press Item 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://i0.wp.com/streetreporters.ng/wp-content/uploads/2025/05/1000899408.jpg?w=1218&ssl=1" class="card-img-top" alt="Project 100 Medical Outreach">
+              <div class="card-body">
+                <span class="media-category">Community Impact</span>
+                <h3 class="card-title my-3">Medical Aid and Empowerment for Underserved Communities</h3>
+                <p class="card-text">Detailed coverage of Project 100's comprehensive outreach program providing healthcare and skills training.</p>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Street Reporters | May 11, 2025</small>
+                  <a href="https://streetreporters.ng/2025/05/11/project-100-initiative-ignites-hope-in-zhidu-community-with-medical-aid-empowerment-and-sustainable-solutions/" target="_blank" class="btn btn-sm btn-outline-primary">Read Article</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-lg-9 offset-lg-3">
-          <div class="row">
-            <!-- Media Hero Section -->
-            <section id="media-hero" class="col-12 position-relative vh-100 d-flex align-items-center">
-              <div class="pt-4 pt-lg-5 px-4 px-lg-5 w-100">
-                <div class="row">
-                  <div class="col-lg-8">
-                    <span class="introduction mb-3 d-block">STORIES OF IMPACT</span>
-                    <h1 class="display-3 mb-4">Media Hub</h1>
-                    <p class="lead mb-5">Discover the latest news, press coverage, and stories from our initiatives that are transforming lives across Nigeria.</p>
-                  </div>
-                </div>
-              </div>
-              <img src="https://www.dineandpack.com.ng/forms/sep7-5.jpg " alt="Project 100 Media" class="position-absolute top-0 end-0 img-fluid h-100 opacity-25">
-            </section>
+    <!-- Gallery Section -->
+    <section class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Visual Stories</span>
+          <h2 class="section-title mb-4">Photo Gallery</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">Moments from our programs that capture the impact of our work.</p>
+        </div>
+        
+        <div class="row g-3">
+          <div class="col-md-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-40.jpg">
+              <img src="https://www.dineandpack.com.ng/forms/sep7-40.jpg" class="img-fluid rounded shadow-sm" alt="Training session">
+            </a>
+          </div>
+          <div class="row g-3">
+  <!-- sep7-11 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-11.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-11.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-11">
+    </a>
+  </div>
+  <!-- sep7-12 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-12.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-12.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-12">
+    </a>
+  </div>
+  <!-- sep7-13 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-13.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-13.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-13">
+    </a>
+  </div>
+  <!-- sep7-14 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-14.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-14.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-14">
+    </a>
+  </div>
+  <!-- sep7-15 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-15.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-15.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-15">
+    </a>
+  </div>
+  <!-- sep7-16 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-16.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-16.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-16">
+    </a>
+  </div>
+  <!-- sep7-17 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-17.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-17.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-17">
+    </a>
+  </div>
+  <!-- sep7-18 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-18.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-18.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-18">
+    </a>
+  </div>
+  <!-- sep7-19 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-19.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-19.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-19">
+    </a>
+  </div>
+  <!-- sep7-20 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-20.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-20.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-20">
+    </a>
+  </div>
+  <!-- sep7-21 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-21.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-21.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-21">
+    </a>
+  </div>
+  <!-- sep7-22 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-22.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-22.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-22">
+    </a>
+  </div>
+  <!-- sep7-23 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-23.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-23.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-23">
+    </a>
+  </div>
+  <!-- sep7-24 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-24.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-24.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-24">
+    </a>
+  </div>
+  <!-- sep7-25 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-25.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-25.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-25">
+    </a>
+  </div>
+</div>
+<div class="row g-3">
+  <!-- sep7-27 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-27.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-27.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-27">
+    </a>
+  </div>
+  <!-- sep7-28 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-28.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-28.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-28">
+    </a>
+  </div>
+  <!-- sep7-29 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-29.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-29.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-29">
+    </a>
+  </div>
+  <!-- sep7-30 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-30.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-30.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-30">
+    </a>
+  </div>
+  <!-- sep7-31 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-31.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-31.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-31">
+    </a>
+  </div>
+  <!-- sep7-32 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-32.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-32.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-32">
+    </a>
+  </div>
+  <!-- sep7-33 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-33.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-33.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-33">
+    </a>
+  </div>
+  <!-- sep7-34 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-34.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-34.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-34">
+    </a>
+  </div>
+  <!-- sep7-35 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-35.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-35.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-35">
+    </a>
+  </div>
+  <!-- sep7-36 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-36.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-36.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-36">
+    </a>
+  </div>
+  <!-- sep7-37 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-37.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-37.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-37">
+    </a>
+  </div>
+  <!-- sep7-38 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-38.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-38.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-38">
+    </a>
+  </div>
+  <!-- sep7-39 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-39.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-39.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-39">
+    </a>
+  </div>
+  <!-- sep7-40 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-40.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-40.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-40">
+    </a>
+  </div>
+</div>
+<div class="row g-3">
+  <!-- sep7-40 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-40.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-40.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-40">
+    </a>
+  </div>
+  <!-- sep7-41 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-41.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-41.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-41">
+    </a>
+  </div>
+  <!-- sep7-42 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-42.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-42.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-42">
+    </a>
+  </div>
+  <!-- sep7-43 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-43.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-43.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-43">
+    </a>
+  </div>
+  <!-- sep7-44 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-44.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-44.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-44">
+    </a>
+  </div>
+  <!-- sep7-45 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-45.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-45.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-45">
+    </a>
+  </div>
+  <!-- sep7-46 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-46.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-46.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-46">
+    </a>
+  </div>
+  <!-- sep7-47 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-47.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-47.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-47">
+    </a>
+  </div>
+  <!-- sep7-48 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-48.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-48.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-48">
+    </a>
+  </div>
+  <!-- sep7-49 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-49.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-49.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-49">
+    </a>
+  </div>
+  <!-- sep7-50 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-50.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-50.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-50">
+    </a>
+  </div>
+  <!-- sep7-51 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-51.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-51.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-51">
+    </a>
+  </div>
+  <!-- sep7-52 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-52.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-52.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-52">
+    </a>
+  </div>
+  <!-- sep7-53 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-53.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-53.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-53">
+    </a>
+  </div>
+  <!-- sep7-54 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-54.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-54.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-54">
+    </a>
+  </div>
+  <!-- sep7-55 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-55.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-55.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-55">
+    </a>
+  </div>
+  <!-- sep7-56 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-56.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-56.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-56">
+    </a>
+  </div>
+  <!-- sep7-57 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-57.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-57.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-57">
+    </a>
+  </div>
+  <!-- sep7-58 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-58.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-58.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-58">
+    </a>
+  </div>
+  <!-- sep7-59 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-59.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-59.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-59">
+    </a>
+  </div>
+  <!-- sep7-60 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-60.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-60.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-60">
+    </a>
+  </div>
+</div>
+          <div class="col-md-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-11.jpg">
+              <img src="https://www.dineandpack.com.ng/forms/sep7-11.jpg" class="img-fluid rounded shadow-sm" alt="Graduation ceremony">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-27.jpg">
+              <img src="https://www.dineandpack.com.ng/forms/sep7-27.jpg" class="img-fluid rounded shadow-sm" alt="Community outreach">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-13.jpg">
+              <img src="https://www.dineandpack.com.ng/forms/sep7-13.jpg" class="img-fluid rounded shadow-sm" alt="Skills training">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/z%20(12).jpg">
+              <img src="https://www.dineandpack.com.ng/z%20(12).jpg" class="img-fluid rounded shadow-sm" alt="BlessedFeet distribution">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-20.jpg">
+              <img src="https://www.dineandpack.com.ng/forms/sep7-20.jpg" class="img-fluid rounded shadow-sm" alt="Team photo">
+            </a>
+          </div>
+        </div>
+        <div class="row g-3">
+  <!-- sep7-1 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-1.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-1.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-1">
+    </a>
+  </div>
+  <!-- sep7-2 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-2.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-2.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-2">
+    </a>
+  </div>
+  <!-- sep7-3 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-3.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-3.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-3">
+    </a>
+  </div>
+  <!-- sep7-4 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-4.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-4.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-4">
+    </a>
+  </div>
+  <!-- sep7-5 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-5.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-5.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-5">
+    </a>
+  </div>
+  <!-- sep7-6 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-6.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-6.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-6">
+    </a>
+  </div>
+  <!-- sep7-7 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-7.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-7.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-7">
+    </a>
+  </div>
+  <!-- sep7-8 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-8.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-8.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-8">
+    </a>
+  </div>
+  <!-- sep7-9 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-9.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-9.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-9">
+    </a>
+  </div>
+  <!-- sep7-10 -->
+  <div class="col-md-4">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="https://www.dineandpack.com.ng/forms/sep7-10.jpg">
+      <img src="https://www.dineandpack.com.ng/forms/sep7-10.jpg" class="img-fluid rounded shadow-sm" alt="Gallery image sep7-10">
+    </a>
+  </div>
+</div>
+        <div class="text-center mt-5">
+   
+        </div>
+      </div>
+    </section>
 
-            <!-- Press Coverage Section -->
-            <section id="press" class="pt-5 px-4 px-lg-5 my-5 py-5">
-              <div class="row">
-                <div class="col-lg-12 mb-5">
-                  <span class="introduction mb-3 d-block">IN THE NEWS</span>
-                  <h2 class="mb-4">Press Coverage</h2>
-                  <p class="lead">See how media outlets are covering our work and impact.</p>
-                </div>
-              </div>
-              
-              <div class="row g-4">
-                <!-- Press Item 1 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                  <div class="card bg-dark border-light h-100">
-                    <img src="https://i0.wp.com/streetreporters.ng/wp-content/uploads/2025/05/1000892252.jpg?w=1067&ssl=1" class="card-img-top" alt="Project 100 Zhidu Community Outreach">
-                    <div class="card-body">
-                      <h3 class="card-title mb-3">Project 100 Initiative Ignites Hope in Zhidu Community</h3>
-                      <p class="card-text">Medical aid, empowerment programs and sustainable solutions brought to the Zhidu community through Project 100's outreach initiative.</p>
-                      <a href="https://streetreporters.ng/2025/05/11/project-100-initiative-ignites-hope-in-zhidu-community-with-medical-aid-empowerment-and-sustainable-solutions/" target="_blank" class="btn btn-outline-light mt-3">Read Article</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                      Street Reporters | May 11, 2025
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Press Item 2 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                  <div class="card bg-dark border-light h-100">
-                    <img src="https://www.nairaland.com/attachments/19299028_zhiduareaoffctabuja_jpeg63f976346405d4b0232663942abc8033 " class="card-img-top" alt="Chef Mimi's Project 100">
-                    <div class="card-body">
-                      <h3 class="card-title mb-3">Chef Mimi's Project 100 Takes Empowerment to New Heights</h3>
-                      <p class="card-text">Feature on how Shetu Gamaliel's Project 100 is transforming lives through skills acquisition and mentorship programs.</p>
-                      <a href="https://www.nairaland.com/8431510/chef-mimis-project-100-takes" target="_blank" class="btn btn-outline-light mt-3">Read Article</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                      Nairaland | April 28, 2025
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Press Item 3 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                  <div class="card bg-dark border-light h-100">
-                    <img src="https://i0.wp.com/streetreporters.ng/wp-content/uploads/2025/05/1000899408.jpg?w=1218&ssl=1 " class="card-img-top" alt="Project 100 Medical Outreach">
-                    <div class="card-body">
-                      <h3 class="card-title mb-3">Medical Aid and Empowerment for Underserved Communities</h3>
-                      <p class="card-text">Detailed coverage of Project 100's comprehensive outreach program providing healthcare and skills training.</p>
-                      <a href="https://streetreporters.ng/2025/05/11/project-100-initiative-ignites-hope-in-zhidu-community-with-medical-aid-empowerment-and-sustainable-solutions/" target="_blank" class="btn btn-outline-light mt-3">Read Article</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                      Street Reporters | May 11, 2025
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+   
 
-       
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Project100</h5>
+            <p>Empowering underprivileged youth through targeted training, mentorship, and capacity-building programs to unlock their potential and enable meaningful contributions to society.</p>
+            <div class="social-icons mt-4">
+              <a href="https://www.instagram.com/project_1hundredd/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/project-1hundred" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://x.com/Project_100hund" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="what-we-do.html">Our Programs</a></li>
+              <li><a href="blessedfeet.html">BlessedFeet</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Get Involved</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="donate.html">Donate</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform">Volunteer</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1">Apply for Training</a></li>
+              <li><a href="contact.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Contact Information</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="fas fa-map-marker-alt me-2"></i> 14b, Accra Street, Wuse Zone 5, Abuja</li>
+              <li><i class="fas fa-envelope me-2"></i> Project100@gmail.com</li>
+              <li><i class="fas fa-phone me-2"></i> 08087630000, 07036414313</li>
+            </ul>
+            <div class="mt-4">
+              <a href="donate.html" class="btn btn-primary">Donate Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+        
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2023 Project100. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">A CSR initiative of <a href="https://www.dineandpack.com.ng/" class="text-white">Dine & Pack</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="" class="img-fluid" id="modalImage" alt="Gallery image">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
+    
+    <script>
+      // Gallery modal functionality
+      const galleryModal = document.getElementById('galleryModal');
+      if (galleryModal) {
+        galleryModal.addEventListener('show.bs.modal', function (event) {
+          const button = event.relatedTarget;
+          const imgSrc = button.getAttribute('data-bs-img');
+          const modalImage = galleryModal.querySelector('#modalImage');
+          modalImage.src = imgSrc;
+        });
+      }
+    </script>
   </body>
 </html>
