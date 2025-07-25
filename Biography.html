@@ -1,303 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project 100 - Empowering Underprivileged Youth Globally</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="p (5).jpeg">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-      :root {
-        --primary-red: #e30613;
-        --dark-red: #c00511;
-        --light-red: #ff4d4d;
-        --white: #ffffff;
-        --light-gray: #f8f9fa;
-        --medium-gray: #e9ecef;
-        --dark-gray: #495057;
-        --black: #212529;
-      }
-      
-      body {
-        font-family: 'Roboto', sans-serif;
-        color: var(--black);
-        background-color: var(--white);
-        line-height: 1.6;
-      }
-      
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-      }
-      
-      .navbar {
-        background-color: var(--white);
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      }
-      
-      .navbar-brand {
-        font-weight: 700;
-        color: var(--primary-red) !important;
-        font-size: 1.8rem;
-      }
-      
-      .nav-link {
-        color: var(--dark-gray) !important;
-        font-weight: 500;
-        padding: 0.5rem 1rem !important;
-        margin: 0 0.2rem;
-        transition: all 0.3s ease;
-      }
-      
-      .nav-link:hover, .nav-link.active {
-        color: var(--primary-red) !important;
-      }
-      
-      .btn-primary {
-        background-color: var(--primary-red);
-        border-color: var(--primary-red);
-        padding: 0.5rem 1.5rem;
-        font-weight: 600;
-      }
-      
-      .btn-primary:hover {
-        background-color: var(--dark-red);
-        border-color: var(--dark-red);
-      }
-      
-      .btn-outline-primary {
-        color: var(--primary-red);
-        border-color: var(--primary-red);
-        font-weight: 600;
-      }
-      
-      .btn-outline-primary:hover {
-        background-color: var(--primary-red);
-        border-color: var(--primary-red);
-      }
-      
-      .hero-section {
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.dineandpack.com.ng/forms/sep7-20.jpg');
-        background-size: cover;
-        background-position: center;
-        color: var(--white);
-        padding: 8rem 0;
-        text-align: center;
-      }
-      
-      .section-title {
-        position: relative;
-        margin-bottom: 3rem;
-        color: var(--primary-red);
-      }
-      
-      .section-title:after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 50px;
-        height: 3px;
-        background-color: var(--primary-red);
-      }
-      
-      .impact-number {
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--primary-red);
-        margin-bottom: 1rem;
-      }
-      
-      .card {
-        border: none;
-        border-radius: 0;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        transition: all 0.3s ease;
-        margin-bottom: 2rem;
-      }
-      
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      }
-      
-      .card-icon {
-        font-size: 2.5rem;
-        color: var(--primary-red);
-        margin-bottom: 1.5rem;
-      }
-      
-      .bg-light-red {
-        background-color: rgba(227, 6, 19, 0.05);
-      }
-      
-      .footer {
-        background-color: var(--black);
-        color: var(--white);
-        padding: 4rem 0 2rem;
-      }
-      
-      .footer-links h5 {
-        color: var(--white);
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-      }
-      
-      .footer-links a {
-        color: var(--medium-gray);
-        text-decoration: none;
-        display: block;
-        margin-bottom: 0.5rem;
-        transition: all 0.3s ease;
-      }
-      
-      .footer-links a:hover {
-        color: var(--primary-red);
-        padding-left: 5px;
-      }
-      
-      .social-icons a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255,255,255,0.1);
-        color: var(--white);
-        border-radius: 50%;
-        text-align: center;
-        line-height: 40px;
-        margin-right: 10px;
-        transition: all 0.3s ease;
-      }
-      
-      .social-icons a:hover {
-        background-color: var(--primary-red);
-        transform: translateY(-3px);
-      }
-      
-      .testimonial-card {
-        background-color: var(--white);
-        border-left: 4px solid var(--primary-red);
-        padding: 2rem;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      }
-      
-      .testimonial-author {
-        color: var(--primary-red);
-        font-weight: 600;
-      }
-      
-      .partner-logo {
-        filter: grayscale(100%);
-        opacity: 0.7;
-        transition: all 0.3s ease;
-      }
-      
-      .partner-logo:hover {
-        filter: grayscale(0);
-        opacity: 1;
-      }
-      
-      .cta-section {
-        background: linear-gradient(rgba(227, 6, 19, 0.9), rgba(227, 6, 19, 0.9)), url('vj (3).webp');
-        background-size: cover;
-        background-position: center;
-        color: var(--white);
-        padding: 5rem 0;
-        text-align: center;
-      }
-      
-      .breadcrumb {
-        background-color: transparent;
-        padding: 0;
-      }
-      
-      .breadcrumb-item a {
-        color: var(--dark-gray);
-        text-decoration: none;
-      }
-      
-      .breadcrumb-item.active {
-        color: var(--primary-red);
-      }
-      
-      .breadcrumb-item+.breadcrumb-item::before {
-        content: ">";
-      }
-      
-      @media (max-width: 768px) {
-        .hero-section {
-          padding: 5rem 0;
-        }
-        
-        .section-title {
-          font-size: 1.8rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Project<span style="color: var(--black)">100</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="about.html">About </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="what-we-do.html"> Programs</a>
-            </li>
-               <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blessedfeet.html">BlessedFeet</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="media.html">Media </a>
-            </li>
-          
-              <li class="nav-item">
-              <a class="nav-link" href="Involved.html">Get Involved</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item ms-lg-3">
-              <a class="btn btn-primary" href="donate.html">Donate Now</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <title>Shetu Gamaliel - Biography | Project 100 Founder</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-red: #e30613;
+            --dark-red: #c00511;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-gray: #495057;
+            --black: #212529;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--black);
+            line-height: 1.8;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
         .text-primary-red {
-            color: #e63946;
+            color: var(--primary-red);
         }
         .bg-light-red {
-            background-color: #fff5f5;
+            background-color: rgba(227, 6, 19, 0.05);
         }
         .section-title {
-            font-weight: 700;
-            color: #1d3557;
+            position: relative;
+            margin-bottom: 2.5rem;
+            color: var(--primary-red);
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-red);
         }
         .icon-box {
             width: 60px;
@@ -306,6 +53,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: rgba(227, 6, 19, 0.1);
+            color: var(--primary-red);
         }
         .hover-scale {
             transition: transform 0.3s ease;
@@ -313,112 +62,409 @@
         .hover-scale:hover {
             transform: translateY(-5px);
         }
-        .founder-bio {
-            line-height: 1.8;
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-red);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary-red);
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 2px var(--primary-red);
+        }
+        .quote-block {
+            border-left: 4px solid var(--primary-red);
+            background-color: var(--light-gray);
+            padding: 2rem;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        .impact-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-red);
+        }
+        .nav-pills .nav-link {
+            color: var(--dark-gray);
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
-    <!-- Founder Section -->
-    <section class="py-5 bg-light-red">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <img src="Chef mimi image.jpg" alt="Shetu Gamaliel" class="img-fluid rounded shadow">
+    <!-- Biography Header -->
+    
+<section class="biography-header py-5">
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent px-0">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li class="breadcrumb-item"><a href="about.html" class="text-decoration-none text-muted">About</a></li>
+                        <li class="breadcrumb-item active text-primary-red" aria-current="page">Biography</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold mb-3 text-gradient">Shetu Gamaliel</h1>
+                <p class="lead text-dark mb-4">Visionary Entrepreneur, Educator & Social Impact Leader</p>
+                
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="position-relative">
+                    <img src="Chef mimi image.jpg" alt="Shetu Gamaliel" class="img-fluid rounded-3 shadow-lg" style="max-height: 400px; width: 100%; object-fit: cover;">
+                    <div class="position-absolute bottom-0 start-0 bg-primary-red text-white px-3 py-2 rounded-end">
+                        <i class="fas fa-quote-left me-2"></i>Empowering communities through action
+                    </div>
                 </div>
-                <div class="col-lg-7">
-                    <span class="text-uppercase text-primary-red fw-bold">Leadership</span>
-                    <h2 class="section-title mb-4">Our Founder</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .biography-header {
+        background: linear-gradient(135deg, rgba(227, 6, 19, 0.05) 0%, rgba(255,255,255,1) 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .biography-header::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(227, 6, 19, 0.08);
+        border-radius: 50%;
+        z-index: 0;
+    }
+    
+    .biography-header::after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        left: -100px;
+        width: 300px;
+        height: 300px;
+        background-color: rgba(227, 6, 19, 0.05);
+        border-radius: 50%;
+        z-index: 0;
+    }
+    
+    .text-gradient {
+        background: linear-gradient(90deg, #e30613 0%, #333 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+    }
+    
+    .breadcrumb-item.active {
+        font-weight: 600;
+    }
+    
+    .img-fluid {
+        border: 5px solid white;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .img-fluid:hover {
+        transform: scale(1.02);
+    }
+    
+    @media (max-width: 992px) {
+        .biography-header::before,
+        .biography-header::after {
+            display: none;
+        }
+        
+        .display-4 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+    <!-- Biography Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="section-title">Biography</h2>
                     
-                    <h3 class="text-dark mb-3">Shetu Gamaliel</h3>
-                    <p class="lead fst-italic">Dynamic culinary entrepreneur, educator, and impact-driven changemaker</p>
+                    <p>Shetu Gamaliel is a dynamic Nigerian entrepreneur, educator, and social impact leader whose multifaceted career bridges culinary excellence, youth empowerment, and women's leadership development. Based in Abuja, she has built an inspiring legacy that combines business acumen with compassionate social impact, driven by her belief that sustainable change comes from equipping individuals with both skills and opportunities.</p>
                     
-                    <div class="founder-bio">
-                        <p>Shetu Gamaliel is a visionary leader and social entrepreneur based in Abuja, Nigeria, whose multifaceted career bridges culinary excellence and youth empowerment.</p>
-                        
-                        <p>With a deep passion for food, community development, and education, she has built an inspiring legacy that combines business acumen with compassionate social impact. Her work embodies the belief that sustainable change comes from equipping individuals with both skills and opportunities.</p>
-                        
-                        <p>As the founder of Dine and Pack Culinary School and Restaurant, Shetu has trained and mentored hundreds of aspiring chefs and food entrepreneurs. Her institution is renowned for its holistic approach, combining:</p>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> World-class culinary instruction</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Practical business training</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Entrepreneurial mentorship</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Personal development coaching</li>
-                        </ul>
-                        
-                        <p>This comprehensive model produces graduates who excel both in culinary arts and business management, creating ripple effects throughout their communities.</p>
-                        
-                        <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="Biography.html" class="btn btn-primary">
-                                <i class="fas fa-book-open me-2"></i> Full Biography
-                            </a>
-                            <a href="https://www.linkedin.com/in/shetu-gamaliel-101008216/" class="btn btn-outline-primary" target="_blank">
-                                <i class="fab fa-linkedin-in me-2"></i> Connect
-                            </a>
+                    <div class="quote-block my-4">
+                        <p class="mb-0">"True leadership is about creating pathways for others to succeed while building sustainable systems that outlive your personal involvement."</p>
+                    </div>
+                    
+                    <h3 class="mt-5 mb-4">Culinary Entrepreneurship</h3>
+                    <p>As the founder of Dine and Pack Culinary School and Restaurant, Shetu has trained and mentored hundreds of aspiring chefs and food entrepreneurs. Her institution is renowned for its holistic approach that combines:</p>
+                    <ul class="mb-4">
+                        <li class="mb-2">World-class culinary instruction with international best practices</li>
+                        <li class="mb-2">Practical business training and financial literacy</li>
+                        <li class="mb-2">Entrepreneurial mentorship and industry networking</li>
+                        <li class="mb-2">Personal development and leadership coaching</li>
+                    </ul>
+                    <p>This comprehensive model produces graduates who excel both in culinary arts and business management, creating ripple effects throughout their communities. Under her leadership, Dine and Pack has become one of Abuja's most respected culinary institutions.</p>
+                    
+                    <h3 class="mt-5 mb-4">Social Impact Through Project100</h3>
+                    <p>Shetu Gamaliel is the visionary behind Project100, a social impact initiative committed to empowering underprivileged youth and underserved communities through targeted interventions. Born out of a deep desire to give back meaningfully to society, Project100 has:</p>
+                    
+                    <div class="row my-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <div class="icon-box mx-auto mb-3">
+                                        <i class="fas fa-hands-helping fa-lg"></i>
+                                    </div>
+                                    <h5>2,000+ Direct Beneficiaries</h5>
+                                    <p class="mb-0">Impacted through various programs and initiatives</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <div class="icon-box mx-auto mb-3">
+                                        <i class="fas fa-graduation-cap fa-lg"></i>
+                                    </div>
+                                    <h5>Vocational Training</h5>
+                                    <p class="mb-0">Providing free skills acquisition and business startup support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>Project100 has executed various large-scale outreach programs, including medical outreaches, food and essentials distribution, and empowerment drives across vulnerable communities. Key highlights include multiple outreach programs at the Zhidu community and internally displaced persons (IDP) camps, where participants benefited from both skill-building programs and critical relief items.</p>
+                    
+                    <p>The initiative has also conducted community orientations to promote self-reliance, financial literacy, and mental wellness among youth and women. Project100 runs impactful campaigns such as:</p>
+                    
+                    <ul class="mb-4">
+                        <li class="mb-2"><strong>Back-to-School Drive:</strong> Provides school supplies and educational support to disadvantaged children</li>
+                        <li class="mb-2"><strong>Blessedfeet Campaign:</strong> In partnership with Bata Nigeria, this initiative aims to offer clothing, footwear, and dignity support to over 100,000+ vulnerable children across Nigeria</li>
+                    </ul>
+                    
+                    <h3 class="mt-5 mb-4">Leadership in Women's Empowerment</h3>
+                    <p>In her broader leadership capacity, Shetu currently serves as the President of AWCNext (Africa Women Conference Next), a platform that amplifies the voices, ideas, and innovations of African women across sectors. Through this role, she:</p>
+                    
+                    <ul class="mb-4">
+                        <li class="mb-2">Builds collaborative ecosystems for young women leaders</li>
+                        <li class="mb-2">Drives inclusion and diversity in entrepreneurship</li>
+                        <li class="mb-2">Elevates conversations around development, empowerment, and policy change across Africa</li>
+                    </ul>
+                    
+                    <p>Her consistent efforts in education and social impact recently earned her the prestigious role of United Nations Girls and Women Speak Ambassador. This appointment recognizes her voice and leadership in championing gender equity and youth empowerment.</p>
+                    
+                    <h3 class="mt-5 mb-4">Recognition & Awards</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card border-0 h-100 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="me-3 text-primary-red">
+                                            <i class="fas fa-trophy fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5>2022 Social Entrepreneur Award</h5>
+                                            <p class="mb-0">Nigerian Women's Entrepreneurship Forum</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card border-0 h-100 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="me-3 text-primary-red">
+                                            <i class="fas fa-medal fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5>UN Ambassador</h5>
+                                            <p class="mb-0">Girls/Women Speak Ambassador</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5 mb-4">Personal Philosophy</h3>
+                    <p>Shetu Gamaliel's work is driven by a core belief in the transformative power of education, mentorship, and opportunity. She maintains that sustainable community development comes from empowering individuals with practical skills while addressing immediate needs. Her approach combines:</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <div class="icon-box mx-auto mb-3">
+                                    <i class="fas fa-brain fa-lg"></i>
+                                </div>
+                                <h5>Mindset Change</h5>
+                                <p>Shifting perspectives on possibilities</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <div class="icon-box mx-auto mb-3">
+                                    <i class="fas fa-hands fa-lg"></i>
+                                </div>
+                                <h5>Skills Development</h5>
+                                <p>Practical, market-relevant training</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <div class="icon-box mx-auto mb-3">
+                                    <i class="fas fa-rocket fa-lg"></i>
+                                </div>
+                                <h5>Opportunity Creation</h5>
+                                <p>Pathways to sustainable livelihoods</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-light-red p-4 rounded my-5">
+                        <h4 class="text-primary-red mb-3">In Her Own Words</h4>
+                        <p class="fst-italic">"My journey has taught me that real impact happens at the intersection of passion and purpose. Whether through culinary education, community outreach, or women's empowerment, my mission remains the same: to light pathways that help others discover and maximize their potential."</p>
+                        <p class="mb-0 fst-italic">"We measure success not by what we accomplish for ourselves, but by how many lives we positively transform along the way."</p>
+                    </div>
+                    
+                    <h3 class="mt-5 mb-4">Current Focus</h3>
+                    <p>Today, Shetu continues to mentor youth, advocate for women's inclusion in entrepreneurship, and volunteer her expertise in programs centered on skills development and nation building. Her current priorities include:</p>
+                    
+                    <ul class="mb-4">
+                        <li class="mb-2">Expanding Project100's reach to more underserved communities across Nigeria</li>
+                        <li class="mb-2">Developing scalable models for vocational education and entrepreneurship training</li>
+                        <li class="mb-2">Strengthening partnerships with corporate and international organizations to amplify impact</li>
+                        <li class="mb-2">Advocating for policy changes that support youth and women's economic empowerment</li>
+                    </ul>
+                    
+                    <div class="card border-0 shadow-sm mt-5">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary-red mb-3">Legacy & Future Vision</h4>
+                            <p>Shetu Gamaliel represents a new generation of African leaders who are redefining social entrepreneurship. Her work demonstrates how business excellence and social impact can create powerful synergies that drive sustainable development.</p>
+                            <p class="mb-0">Looking ahead, she envisions building an ecosystem where culinary arts, vocational training, and women's empowerment converge to create unprecedented opportunities for Nigeria's youth and underserved populations. Her ultimate goal is to establish models of empowerment that can be replicated across Africa, creating waves of positive change that uplift entire communities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm sticky-top" style="top: 20px;">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary-red mb-4">Quick Facts</h4>
+                            
+                            <div class="mb-4">
+                                <h5 class="d-flex align-items-center">
+                                    <i class="fas fa-briefcase me-2 text-primary-red"></i>
+                                    <span>Roles</span>
+                                </h5>
+                                <ul class="list-unstyled ps-4">
+                                    <li class="mb-2">• Founder, Dine & Pack Culinary School</li>
+                                    <li class="mb-2">• Founder, Project100</li>
+                                    <li class="mb-2">• President, AWCNext</li>
+                                    <li class="mb-2">• UN Girls/Women Speak Ambassador</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="d-flex align-items-center">
+                                    <i class="fas fa-trophy me-2 text-primary-red"></i>
+                                    <span>Key Achievements</span>
+                                </h5>
+                                <ul class="list-unstyled ps-4">
+                                    <li class="mb-2">• Trained 500+ culinary professionals</li>
+                                    <li class="mb-2">• Impacted 2,000+ through Project100</li>
+                                    <li class="mb-2">• 2022 Social Entrepreneur Award winner</li>
+                                    <li class="mb-2">• Recognized UN Ambassador</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="d-flex align-items-center">
+                                    <i class="fas fa-bullseye me-2 text-primary-red"></i>
+                                    <span>Current Initiatives</span>
+                                </h5>
+                                <ul class="list-unstyled ps-4">
+                                    <li class="mb-2">• Project100 community outreaches</li>
+                                    <li class="mb-2">• Blessedfeet Campaign (100,000+ children target)</li>
+                                    <li class="mb-2">• Africa Women Conference Next programs</li>
+                                    <li class="mb-2">• Culinary entrepreneurship advocacy</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="Involved.html" class="btn btn-primary me-2 mb-2">
+                                    <i class="fas fa-handshake me-1"></i> Get Involved
+                                </a>
+                                <a href="donate.html" class="btn btn-outline-primary mb-2">
+                                    <i class="fas fa-donate me-1"></i> Donate
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Founder Achievements -->
-            <div class="row mt-5 pt-4">
-                <div class="col-12">
-                    <h4 class="mb-4 text-center">Key Achievements & Recognition</h4>
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="card border-0 h-100 shadow-sm hover-scale">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-award fa-2x text-primary-red mb-3"></i>
-                                    <h5>2022 Social Entrepreneur Award</h5>
-                                    <p class="mb-0">Recognized by the Nigerian Women's Entrepreneurship Forum</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 h-100 shadow-sm hover-scale">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-users fa-2x text-primary-red mb-3"></i>
-                                    <h5>500+ Graduates</h5>
-                                    <p class="mb-0">Trained through Dine & Pack programs</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 h-100 shadow-sm hover-scale">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-microphone fa-2x text-primary-red mb-3"></i>
-                                    <h5>Featured Speaker</h5>
-                                    <p class="mb-0">At international conferences on youth empowerment</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 h-100 shadow-sm hover-scale">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-globe-africa fa-2x text-primary-red mb-3"></i>
-                                    <h5>IAWPA & UN Ambassador</h5>
-                                    <p class="mb-0">Girls/women Speak Ambassador</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 h-100 shadow-sm hover-scale">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-user-friends fa-2x text-primary-red mb-3"></i>
-                                    <h5>African Women Conference</h5>
-                                    <p class="mb-0">Next Generation Coordinator</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 h-100 shadow-sm hover-scale">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-star fa-2x text-primary-red mb-3"></i>
-                                    <h5>Community Leadership</h5>
-                                    <p class="mb-0">Recognized for outstanding community impact</p>
-                                </div>
-                            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics -->
+    <section class="py-5 bg-light-red">
+        <div class="container py-4">
+            <h2 class="section-title text-center mb-5">Impact By The Numbers</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="impact-number">500+</div>
+                    <h5>Culinary Graduates</h5>
+                    <p>Trained through Dine & Pack</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="impact-number">2,000+</div>
+                    <h5>Lives Touched</h5>
+                    <p>Through Project100 initiatives</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="impact-number">100K+</div>
+                    <h5>Children Targeted</h5>
+                    <p>Through Blessedfeet Campaign</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="impact-number">15+</div>
+                    <h5>Communities Reached</h5>
+                    <p>Across Nigeria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Summary -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card border-0 bg-dark text-white shadow-lg">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="mb-4">In Summary</h3>
+                            <p class="lead mb-0">Shetu Gamaliel is a woman of vision, impact, and skill. From building one of Abuja's most respected culinary schools to transforming lives through Project100 and advocating for women across Africa, her work continues to create a ripple of positive change. Her brand is a rare fusion of culinary artistry, community service, and female leadership. She represents the future of food and social impact in Nigeria—and beyond.</p>
                         </div>
                     </div>
                 </div>
