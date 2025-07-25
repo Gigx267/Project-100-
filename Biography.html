@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 100 - Empowering Underprivileged Youth Globally</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="p (5).jpeg">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --primary-red: #e30613;
+        --dark-red: #c00511;
+        --light-red: #ff4d4d;
+        --white: #ffffff;
+        --light-gray: #f8f9fa;
+        --medium-gray: #e9ecef;
+        --dark-gray: #495057;
+        --black: #212529;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        background-color: var(--white);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+      
+      .navbar {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-red) !important;
+        font-size: 1.8rem;
+      }
+      
+      .nav-link {
+        color: var(--dark-gray) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        margin: 0 0.2rem;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+      }
+      
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--dark-red);
+        border-color: var(--dark-red);
+      }
+      
+      .btn-outline-primary {
+        color: var(--primary-red);
+        border-color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .btn-outline-primary:hover {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+      }
+      
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.dineandpack.com.ng/forms/sep7-20.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 8rem 0;
+        text-align: center;
+      }
+      
+      .section-title {
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-red);
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-red);
+      }
+      
+      .impact-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        margin-bottom: 1rem;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      
+      .card-icon {
+        font-size: 2.5rem;
+        color: var(--primary-red);
+        margin-bottom: 1.5rem;
+      }
+      
+      .bg-light-red {
+        background-color: rgba(227, 6, 19, 0.05);
+      }
+      
+      .footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 4rem 0 2rem;
+      }
+      
+      .footer-links h5 {
+        color: var(--white);
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .footer-links a {
+        color: var(--medium-gray);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+      }
+      
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+      
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255,255,255,0.1);
+        color: var(--white);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        background-color: var(--primary-red);
+        transform: translateY(-3px);
+      }
+      
+      .testimonial-card {
+        background-color: var(--white);
+        border-left: 4px solid var(--primary-red);
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      }
+      
+      .testimonial-author {
+        color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .partner-logo {
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      
+      .partner-logo:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+      
+      .cta-section {
+        background: linear-gradient(rgba(227, 6, 19, 0.9), rgba(227, 6, 19, 0.9)), url('vj (3).webp');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 5rem 0;
+        text-align: center;
+      }
+      
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+      }
+      
+      .breadcrumb-item a {
+        color: var(--dark-gray);
+        text-decoration: none;
+      }
+      
+      .breadcrumb-item.active {
+        color: var(--primary-red);
+      }
+      
+      .breadcrumb-item+.breadcrumb-item::before {
+        content: ">";
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 5rem 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Project<span style="color: var(--black)">100</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="about.html">About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="what-we-do.html"> Programs</a>
+            </li>
+               <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blessedfeet.html">BlessedFeet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media.html">Media </a>
+            </li>
+          
+              <li class="nav-item">
+              <a class="nav-link" href="Involved.html">Get Involved</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary" href="donate.html">Donate Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .text-primary-red {
+            color: #e63946;
+        }
+        .bg-light-red {
+            background-color: #fff5f5;
+        }
+        .section-title {
+            font-weight: 700;
+            color: #1d3557;
+        }
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        .founder-bio {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Founder Section -->
+    <section class="py-5 bg-light-red">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <img src="Chef mimi image.jpg" alt="Shetu Gamaliel" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-7">
+                    <span class="text-uppercase text-primary-red fw-bold">Leadership</span>
+                    <h2 class="section-title mb-4">Our Founder</h2>
+                    
+                    <h3 class="text-dark mb-3">Shetu Gamaliel</h3>
+                    <p class="lead fst-italic">Dynamic culinary entrepreneur, educator, and impact-driven changemaker</p>
+                    
+                    <div class="founder-bio">
+                        <p>Shetu Gamaliel is a visionary leader and social entrepreneur based in Abuja, Nigeria, whose multifaceted career bridges culinary excellence and youth empowerment.</p>
+                        
+                        <p>With a deep passion for food, community development, and education, she has built an inspiring legacy that combines business acumen with compassionate social impact. Her work embodies the belief that sustainable change comes from equipping individuals with both skills and opportunities.</p>
+                        
+                        <p>As the founder of Dine and Pack Culinary School and Restaurant, Shetu has trained and mentored hundreds of aspiring chefs and food entrepreneurs. Her institution is renowned for its holistic approach, combining:</p>
+                        
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> World-class culinary instruction</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Practical business training</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Entrepreneurial mentorship</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Personal development coaching</li>
+                        </ul>
+                        
+                        <p>This comprehensive model produces graduates who excel both in culinary arts and business management, creating ripple effects throughout their communities.</p>
+                        
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="Biography.html" class="btn btn-primary">
+                                <i class="fas fa-book-open me-2"></i> Full Biography
+                            </a>
+                            <a href="https://www.linkedin.com/in/shetu-gamaliel-101008216/" class="btn btn-outline-primary" target="_blank">
+                                <i class="fab fa-linkedin-in me-2"></i> Connect
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Founder Achievements -->
+            <div class="row mt-5 pt-4">
+                <div class="col-12">
+                    <h4 class="mb-4 text-center">Key Achievements & Recognition</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-award fa-2x text-primary-red mb-3"></i>
+                                    <h5>2022 Social Entrepreneur Award</h5>
+                                    <p class="mb-0">Recognized by the Nigerian Women's Entrepreneurship Forum</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-users fa-2x text-primary-red mb-3"></i>
+                                    <h5>500+ Graduates</h5>
+                                    <p class="mb-0">Trained through Dine & Pack programs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-microphone fa-2x text-primary-red mb-3"></i>
+                                    <h5>Featured Speaker</h5>
+                                    <p class="mb-0">At international conferences on youth empowerment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-globe-africa fa-2x text-primary-red mb-3"></i>
+                                    <h5>IAWPA & UN Ambassador</h5>
+                                    <p class="mb-0">Girls/women Speak Ambassador</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-user-friends fa-2x text-primary-red mb-3"></i>
+                                    <h5>African Women Conference</h5>
+                                    <p class="mb-0">Next Generation Coordinator</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 h-100 shadow-sm hover-scale">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-star fa-2x text-primary-red mb-3"></i>
+                                    <h5>Community Leadership</h5>
+                                    <p class="mb-0">Recognized for outstanding community impact</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
