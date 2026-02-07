@@ -214,6 +214,31 @@
           font-size: 1.8rem;
         }
       }
+
+      
+.section-title {
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.story-text p {
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.bento-card {
+  background: #fff;
+}
     </style>
   </head>
   <body>
@@ -245,9 +270,9 @@
               <a class="nav-link" href="media.html">Media </a>
             </li>
           
-              <li class="nav-item">
+            <!--   <li class="nav-item">
               <a class="nav-link" href="Involved.html">Get Involved</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
@@ -277,73 +302,104 @@
 <section class="py-5 bg-light">
   <div class="container py-5">
     <div class="row g-4 align-items-center">
+
       <!-- Bento Grid Left -->
       <div class="col-lg-7">
         <div class="row g-4">
+
           <!-- Large Feature Card -->
           <div class="col-12">
             <div class="bento-card h-100 shadow rounded-4 overflow-hidden d-flex flex-lg-row flex-column">
+              
               <div class="bento-img col-lg-5 p-0">
-                <img src=" https://www.dineandpack.com.ng/forms/sep7-30.jpg" 
-                  class="img-fluid h-100 w-100 object-fit-cover" 
+                <img 
+                  src="https://www.dineandpack.com.ng/forms/sep7-30.jpg"
+                  class="img-fluid h-100 w-100 object-fit-cover"
                   alt="Project 100 Impact">
               </div>
+
               <div class="p-4 col-lg-7">
-                <span class="text-uppercase text-primary-red fw-bold">Our Story</span>
-                <h2 class="section-title mb-3">About Project 100</h2>
-                <p class="lead"></p>
-                <p class="mb-0">Project100 is a social impact initiative launched to empower underprivileged youth and underserved communities through targeted interventions. Rooted in our mission to unlock potential and build capacity, we combine hands-on mentorship, structured training, and community-based support to drive sustainable change.
-Initially established as a CSR initiative of Dine & Pack Ltd, Project100 aims to address the critical needs of the less privileged through Community Interventions, comprehensive training and support programs.
-Since Inception, we have directly and indirectly impacted over 2,000 individuals from underserved communities, helping them to live better lives, unlock potential and launch micro-businesses.   </p>
+                <span class="text-uppercase text-primary-red fw-bold small">Our Story</span>
+                <h2 class="section-title mb-4">About Project 100</h2>
+
+                <div class="story-text">
+                  <p>
+                    Project100 is a social impact initiative launched to empower underprivileged youth and underserved communities through targeted interventions. Rooted in our mission to unlock potential and build capacity, we combine hands-on mentorship, structured training, and community-based support to drive sustainable change.
+                  </p>
+
+                  <p>
+                    Initially established as a Corporate Social Responsibility (CSR) initiative of Dine & Pack Ltd, Project100 was created to address the critical needs of the less privileged through community interventions, comprehensive training programs, and long-term support systems.
+                  </p>
+
+                  <p>
+                    Since inception, we have directly and indirectly impacted over 2,000 individuals from underserved communities — enabling them to live better lives, unlock their potential, and successfully launch sustainable micro-businesses.
+                  </p>
+                </div>
               </div>
+
             </div>
           </div>
-          <!-- Small Cards Row -->
+
+          <!-- Mission Card -->
           <div class="col-6">
             <div class="bento-card shadow rounded-4 overflow-hidden h-100">
-              <img src="https://www.dineandpack.com.ng/forms/sep7-27.jpg" 
-                class="img-fluid w-100 object-fit-cover" 
-                style="height:170px" alt="Empowerment">
+              <img 
+                src="https://www.dineandpack.com.ng/forms/sep7-27.jpg"
+                class="img-fluid w-100 object-fit-cover"
+                style="height:170px"
+                alt="Empowerment">
+
               <div class="p-3">
-                <h6 class="fw-bold mb-2 text-primary">Mission</h6>
-                <p class="mb-0 small"> Empowering the underprivileged through targeted interventions, 
-                  training, mentorship, and capacity-building programs. Our mission is to unlock their
-                   full potential, provide essential skills, and enable them to make meaningful contributions to 
-                  their immediate societies and the world at large </p>
+                <h6 class="fw-bold mb-2 text-primary">Our Mission</h6>
+                <p class="mb-0 small text-justify">
+                  To empower underprivileged individuals through targeted interventions, training, mentorship, and capacity-building programs — enabling them to unlock their full potential and contribute meaningfully to their communities and society at large.
+                </p>
               </div>
             </div>
           </div>
+
+          <!-- Vision Card -->
           <div class="col-6">
             <div class="bento-card shadow rounded-4 overflow-hidden h-100">
-              <img src="https://www.dineandpack.com.ng/forms/sep7-21.jpg " 
-                class="img-fluid w-100 object-fit-cover" 
-                style="height:170px" alt="Mentorship">
+              <img 
+                src="https://www.dineandpack.com.ng/forms/sep7-21.jpg"
+                class="img-fluid w-100 object-fit-cover"
+                style="height:170px"
+                alt="Mentorship">
+
               <div class="p-3">
-                <h6 class="fw-bold mb-2 text-primary"> Vision</h6>
-                <p class="mb-0 small">To create a world where every disadvantaged individual has the 
-                  opportunity to thrive, empowering them with skills and support 
-                  needed to overcome barriers and drive positive change in their communities </p>
+                <h6 class="fw-bold mb-2 text-primary">Our Vision</h6>
+                <p class="mb-0 small text-justify">
+                  To create a world where every disadvantaged individual has the opportunity to thrive — equipped with the skills, confidence, and support needed to overcome barriers and drive lasting positive change.
+                </p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
       <!-- Bento Grid Right -->
-      <div class="col-lg-5">
+  <!--     <div class="col-lg-5">
         <div class="bento-card shadow rounded-4 overflow-hidden h-100">
-          <img src="https://www.dineandpack.com.ng/forms/sep7-11.jpg " 
-            class="img-fluid w-100 object-fit-cover" 
-            style="height:280px" alt="Community">
+          <img 
+            src="https://www.dineandpack.com.ng/forms/sep7-11.jpg"
+            class="img-fluid w-100 object-fit-cover"
+            style="height:280px"
+            alt="Community Impact">
+
           <div class="p-4">
-            <h5 class="fw-bold text-primary">From Local to Global</h5>
-            <p class="mb-0">Our journey began in Abuja and now spans several states and international partnerships, aiming to impact 10,000 youth by 2025.</p>
+            <h5 class="fw-bold text-primary mb-2">From Local to Global</h5>
+            <p class="mb-0 text-justify">
+              Our journey began in Abuja and has since expanded across multiple states and international partnerships — with a bold goal to positively impact 10,000 youths by 2025.
+            </p>
           </div>
         </div>
-      </div>
+      </div> -->
+
     </div>
 
-    <!-- Timeline - Bento Style -->
-    
+    <!-- Timeline - Bento style -->
   </div>
 </section>
 
@@ -443,7 +499,7 @@ Since Inception, we have directly and indirectly impacted over 2,000 individuals
       <!-- Founder Image -->
       <div class="col-lg-5 mb-5 mb-lg-0">
         <div class="position-relative">
-          <img src="Chef mimi image.jpg" alt="Shetu Gamaliel - Founder of Project100" class="img-fluid rounded shadow-lg">
+          <img src="founder.jpeg" alt="Shetu Gamaliel - Founder of Project100" class="img-fluid rounded shadow-lg">
           <div class="position-absolute bottom-0 start-0 bg-primary-red text-white p-3">
             <h5 class="mb-0">Founder & CEO</h5>
           </div>
