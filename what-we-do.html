@@ -254,6 +254,49 @@
           font-size: 1.8rem;
         }
       }
+
+      .program-card {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.program-card + .program-card {
+  margin-top: 3rem;
+}
+
+.content-wrapper {
+  max-width: 540px;
+}
+
+.outreach-box {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.outreach-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.outreach-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.outreach-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0d6efd;
+  font-size: 1.2rem;
+}
+
     </style>
   </head>
   <body>
@@ -310,7 +353,7 @@
       </div>
     </section>
 
-    <!-- Programs Overview -->
+   <!--  <!-- Programs Overview 
     <section class="py-5">
   <div class="container py-5">
     <div class="text-center mb-5">
@@ -322,7 +365,7 @@
     </div>
     
     <div class="row g-4">
-    <!-- Skill Acquisition -->
+    <!-- Skill Acquisition 
 <div class="col-md-6 col-lg-4">
   <div class="card h-100 program-card">
     <div class="card-body p-4">
@@ -347,8 +390,8 @@
   </div>
 </div>
       
-      <!-- Educational Support -->
-      <!-- Educational Support -->
+      <!-- Educational Support 
+      <!-- Educational Support
 <div class="col-md-6 col-lg-4">
   <div class="card h-100 program-card">
     <div class="card-body p-4">
@@ -379,7 +422,7 @@
   </div>
 </div>
       
-     <!-- Mentorship -->
+     <!-- Mentorship 
 <div class="col-md-6 col-lg-4">
   <div class="card h-100 program-card">
     <div class="card-body p-4">
@@ -416,10 +459,10 @@
   </div>
 </div>
       
-      <!-- Business Support -->
+      <!-- Business Support 
       
       
-      <!-- Community Outreach -->
+      <!-- Community Outreach 
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 program-card">
           <div class="card-body p-4">
@@ -441,7 +484,7 @@
         </div>
       </div>
       
-      <!-- Vocational Placement -->
+      <!-- Vocational Placement 
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 program-card">
           <div class="card-body p-4">
@@ -464,42 +507,227 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
     <!-- Program Details Sections -->
    <!-- Community Outreach Details -->
-<section id="community-outreach" class="py-5 bg-light-red">
+
+   
+<section id="programs-showcase" class="py-5 bg-light-red">
   <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="z2.jpg" alt="Community Outreach Program" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-lg-6">
-        <h2 class="section-title mb-4">Community Outreach</h2>
-        <p>
-          We organize impactful outreach programs—ranging from medical aid and food/essential item distribution to skills training and community sensitization—serving all age groups and addressing pressing needs within underserved communities.
-        </p>
-        <p>
-          By extending our work beyond individual beneficiaries, we create holistic interventions that provide immediate relief while fostering long-term resilience and empowerment in the communities we serve.
-        </p>
-        <div class="mt-4">
-          <h5>Outreach Activities Include:</h5>
-          <ul>
-            <li><strong>Charity Fairs:</strong> Periodic events offering free essential goods and services</li>
-            <li><strong>IDP Camp Support:</strong> Delivery of supplies and vocational training to displaced families</li>
-            <li><strong>Community Skills Training:</strong> Mobile training sessions in local neighborhoods</li>
-            <li><strong>Health/Medical Outreaches:</strong> Hygiene education and access to basic medical care</li>
-            <li><strong>Advocacy Campaigns:</strong> Awareness drives on youth empowerment and inclusion</li>
-          </ul>
+
+    <!-- PROGRAM CARD 1: Community Outreach -->
+    <div class="program-card mb-5">
+      <div class="row g-5 align-items-center">
+
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img 
+            src="z2.jpg" 
+            alt="Community Outreach Program" 
+            class="img-fluid rounded shadow w-100"
+          >
         </div>
-        <div class="mt-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-primary me-2">Volunteer for Outreach</a>
-          <a href="#programs" class="btn btn-outline-primary">All Programs</a>
+
+        <!-- Content -->
+        <div class="col-lg-6">
+          <div class="content-wrapper">
+
+            <h2 class="section-title mb-4">Community Outreach</h2>
+
+            <p class="mb-3">
+              We organize impactful outreach programs—ranging from medical aid and food/essential item distribution to skills training and community sensitization—serving all age groups and addressing pressing needs within underserved communities.
+            </p>
+
+            <p class="mb-4">
+              By extending our work beyond individual beneficiaries, we create holistic interventions that provide immediate relief while fostering long-term resilience and empowerment in the communities we serve.
+            </p>
+
+            <div class="outreach-box mb-4">
+              <h5 class="mb-3">Outreach Activities Include:</h5>
+              <ul class="outreach-list">
+                <li><strong>Charity Fairs:</strong> Periodic events offering free essential goods and services</li>
+                <li><strong>IDP Camp Support:</strong> Delivery of supplies and vocational training to displaced families</li>
+                <li><strong>Community Skills Training:</strong> Mobile training sessions in local neighborhoods</li>
+                <li><strong>Health/Medical Outreaches:</strong> Hygiene education and access to basic medical care</li>
+                <li><strong>Advocacy Campaigns:</strong> Awareness drives on youth empowerment and inclusion</li>
+              </ul>
+            </div>
+<!-- 
+            <div class="d-flex flex-wrap gap-3">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" 
+                class="btn btn-primary"
+              >
+                Volunteer for Outreach
+              </a>
+              <a href="#programs" class="btn btn-outline-primary">
+                All Programs
+              </a>
+            </div> -->
+
+          </div>
         </div>
+
       </div>
     </div>
+
+    <!-- PROGRAM CARD 2: Skill Acquisition & Empowerment -->
+    <div class="program-card">
+      <div class="row g-5 align-items-center flex-lg-row-reverse">
+
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img 
+            src="Skills.jpeg" 
+            alt="Skill Acquisition & Empowerment" 
+            class="img-fluid rounded shadow w-100"
+          >
+        </div>
+
+        <!-- Content -->
+        <div class="col-lg-6">
+          <div class="content-wrapper">
+
+            <h2 class="section-title mb-4">Skill Acquisition & Empowerment</h2>
+
+            <p class="mb-3">
+             Our Skill Acquisition & Empowerment programs are designed to equip young people, especially those from underserved communities, with practical and market-relevant skills that open doors to employment or entrepreneurship. We focus on profitable, high-demand sectors with strong income-generating potential, enabling participants to become self-reliant and economically active.
+
+            <p class="mb-4">
+In addition to hands-on training and mentorship, we provide start-up support—including tools, equipment, and small grants—to help beneficiaries launch their own businesses after graduation. By combining skill development with tangible resources, we ensure that participants are empowered to turn their knowledge into sustainable income and long-term impact.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <!-- PROGRAM CARD 3: 2.	Education Support Programs -->
+    <div class="program-card mb-5">
+      <div class="row g-5 align-items-center">
+
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img 
+            src="Education.jpeg" 
+            alt="Community Outreach Program" 
+            class="img-fluid rounded shadow w-100"
+          >
+        </div>
+
+        <!-- Content -->
+        <div class="col-lg-6">
+          <div class="content-wrapper">
+
+            <h2 class="section-title mb-4">	Education Support Programs</h2>
+
+            <p class="mb-3">
+              We believe that education is a fundamental right and a powerful tool for breaking the cycle of poverty. Our Education Support Programs are designed to remove the financial and social barriers that keep children and youth out of school, especially in underserved communities. Through targeted interventions, we promote access to quality learning, support school retention, and encourage academic excellence.    </p>
+
+            <p class="mb-4">
+            By addressing both immediate needs and long-term access, we empower students to stay in school, thrive in the classroom, and pursue brighter futures. </p>
+
+            <div class="outreach-box mb-4">
+              <h5 class="mb-3">Key Initiatives</h5>
+              <ul class="outreach-list">
+                <ol><strong>Back-to-School Drives:</strong>We organize regular back-to-school campaigns to distribute essential learning materials, uniforms, backpacks, and shoes—ensuring no child is left behind due to lack of basic school items.</ol>
+                <ol><strong>🎓 Scholarship Program:</strong> Our merit- and need-based scholarships provide financial support to promising students, helping them stay in school and complete their education without the burden of fees and related costs.</ol>
+                <ol><strong>👣 BlessedFeet Initiative:</strong>Through our flagship BlessedFeet campaign, we provide durable, high-quality school shoes to children in public schools. This improves school attendance, boosts confidence, and protects young feet from injuries and disease.</ol>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+
+       
+    <!-- PROGRAM CARD 4: 	Mentorship & Capacity Building -->
+    <div class="program-card">
+      <div class="row g-5 align-items-center flex-lg-row-reverse">
+              <!-- Image -->
+        <div class="col-lg-6">
+          <img 
+            src="sep7-82.jpg" 
+            alt="Skill Acquisition & Empowerment" 
+            class="img-fluid rounded shadow w-100"
+          >
+        </div>
+
+        <!-- Content -->
+        <div class="col-lg-6">
+          <div class="content-wrapper">
+
+            <h2 class="section-title mb-4">	Mentorship & Capacity Building</h2>
+
+            <p class="mb-3">
+             At Project 100, we believe that empowerment goes beyond acquiring technical skills. Our Mentorship & Capacity Building programs are designed to support the holistic development of youth and emerging leaders by fostering confidence, purpose, and practical life-readiness.
+
+            <p class="mb-4">
+We connect participants with experienced mentors and facilitators who provide personalized guidance, real-world insight, and access to networks and opportunities. Through structured training and support, we help beneficiaries grow personally and professionally—enabling them to make informed decisions, navigate life’s challenges, and become positive contributors to society.
+            </p>
+
+                  <div class="outreach-box mb-4">
+              <h5 class="mb-3">Program Components</h5>
+              <ul class="outreach-list">
+                <ol><strong>One-on-One Mentoring:</strong>Personalized mentorship with experienced professionals who guide participants in career and personal growth.</ol>
+                <ol><strong>Career Readiness Workshops:</strong> Practical sessions on CV writing, job search strategies, interview techniques, and workplace etiquette.</ol>
+                <ol><strong>Soft Skills Development:</strong>Training on communication, collaboration, emotional intelligence, and problem-solving—essential for success in any field.</ol>
+                <ol><strong>Leadership Development:</strong>Programs focused on nurturing self-confidence, ethical decision-making, and civic responsibility.</ol>
+                 <ol><strong>Life Skills Training:</strong>Sessions on financial literacy, time management, self-awareness, and mental wellness to build resilience and independence.</ol>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+     <!-- PROGRAM CARD 5: Business Support Initiatives -->
+   <!--  <div class="program-card mb-5">
+      <div class="row g-5 align-items-center"> -->
+
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img 
+            src="vj (2).webp" 
+            alt="Community Outreach Program" 
+            class="img-fluid rounded shadow w-100"
+          >
+        </div>
+
+        <!-- Content -->
+        <div class="col-lg-6">
+          <div class="content-wrapper">
+
+            <h2 class="section-title mb-4">	Business Support Initiatives</h2>
+
+            <p class="mb-3">
+             We recognize that skills alone are not enough - entrepreneurs also need support systems to turn their ideas into thriving businesses. Our Business Support Initiatives are designed to help beneficiaries transition from training to enterprise by providing access to startup resources, funding, and expert guidance.   </p>
+
+            <p class="mb-4">
+           These programs are tailored for aspiring small business owners, artisans, and youth-led startups, with a focus on sustainability, financial literacy, and long-term growth. By addressing common barriers like lack of capital, tools, and business knowledge, we empower individuals to transform their skills into stable, income-generating ventures.</p>
+
+            <div class="outreach-box mb-4">
+              <h5 class="mb-3">Support Services</h5>
+              <ul class="outreach-list">
+                <ol><strong>Startup Kits:</strong>Provision of essential tools and equipment needed to kickstart small-scale businesses immediately after training.</ol>
+                <ol><strong>Micro-Grants:</strong> Seed funding to support promising business ideas, helping participants overcome early-stage financial constraints..</ol>
+                <ol><strong>Business Development Training:</strong>Workshops covering business planning, branding, sales, marketing, customer service, and financial management</ol>
+                <ol><strong>Market Linkages:</strong>Access to local markets, business exhibitions, and networks that connect entrepreneurs to potential customers and partners.</ol>
+               <ol><strong>Ongoing Coaching & Mentorship:</strong> Continuous check-ins and personalized support during the first year of business to guide growth and stability./ol>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
   </div>
 </section>
+
 
 <!-- Vocational Placement Details -->
 <section id="vocational-placement" class="py-5">
@@ -522,10 +750,10 @@
             <li><strong>Post-Placement Support:</strong> Continuous guidance to ensure successful transitions into the workforce</li>
           </ul>
         </div>
-        <div class="mt-4">
+     <!--    <div class="mt-4">
           <a href="contact.html" class="btn btn-primary me-2">Hire a Graduate</a>
           <a href="#programs" class="btn btn-outline-primary">All Programs</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -542,7 +770,7 @@
     </div>
     <div class="row text-center">
   <div class="col-md-3 mb-5 mb-md-0">
-    <div class="impact-number" data-target="2000">0</div>
+    <div class="impact-number" data-target="3000">0</div>
     <span class="display-4">+</span>
     <h4 style="color: #e30613;">Lives Impacted</h4>
   </div>
