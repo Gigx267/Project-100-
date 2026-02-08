@@ -215,6 +215,50 @@
           margin-bottom: 1.5rem;
         }
       }
+
+      /* About BlessedFeet text readability */
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-title + p,
+.section-title + p + p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #444;
+  max-width: 600px;
+}
+
+/* Improve long paragraph readability */
+.section-title + p + p {
+  white-space: pre-line; /* respects your line breaks */
+}
+
+/* Subtle emphasis for bullet-style lines */
+.section-title + p + p::first-line {
+  font-weight: 500;
+}
+
+/* Spacing rhythm */
+.section-title + p {
+  margin-bottom: 0.5rem;
+}
+
+.section-title + p + p {
+  margin-top: 0.5rem;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .section-title + p,
+  .section-title + p + p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+
     </style>
   </head>
   <body>
@@ -296,7 +340,7 @@
             <h2 class="section-title mb-4">About BlessedFeet</h2>
             <p></p>
             <p>  
- Av  bold campaign aimed at providing 100,000+ quality school shoes to children in underserved Communities/ public schools across Nigeria — restoring dignity, promoting school attendance, and protecting young feet.
+ A bold campaign aimed at providing 100,000+ quality school shoes to children in underserved Communities/ public schools across Nigeria — restoring dignity, promoting school attendance, and protecting young feet.
 • We’ve secured a strategic production partnership with Zujin Projects Ltd (Bata Nigeria) — a trusted, made-in-Nigeria footwear brand — to produce and deliver these shoes at highly discounted rates.
 • Through this initiative, we are mobilizing sponsors, development partners, and high-net-worth individuals to fund the cost of each pair and extend impact to thousands of children, one step at a time.
 
@@ -306,10 +350,10 @@
                 <span class="stat-number" data-target="10000">0</span>
                 <span class="stat-label">Pairs Distributed</span>
               </div>
-              <div class="stat-item">
+            <!--   <div class="stat-item">
                 <span class="stat-number">25</span>
                 <span class="stat-label">Schools Reached</span>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -394,9 +438,9 @@
           <div class="col-md-6 text-center text-md-start">
             <p class="mb-0">&copy; 2023 Project100. All rights reserved.</p>
           </div>
-          <div class="col-md-6 text-center text-md-end">
+        <!--   <div class="col-md-6 text-center text-md-end">
             <p class="mb-0">A CSR initiative of <a href="https://www.dineandpack.com.ng/" class="text-white">Dine & Pack</a></p>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>

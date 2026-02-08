@@ -239,6 +239,68 @@
 .bento-card {
   background: #fff;
 }
+
+/* Force About Project card to full width */
+.bento-card {
+  max-width: 100%;
+}
+
+/* Make the About Project section span full screen */
+.col-lg-7 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* Improve layout inside the About card */
+.bento-card .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Story text readability */
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #444;
+  max-width: 850px;
+}
+
+/* Center content when full width */
+.bento-card > .p-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Image + text balance */
+.bento-img img {
+  object-fit: cover;
+}
+
+/* Give breathing space on large screens */
+@media (min-width: 992px) {
+  .bento-card {
+    padding: 1.5rem;
+  }
+
+  .story-text {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .bento-card .section-title {
+    font-size: 1.6rem;
+  }
+
+  .story-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -380,7 +442,7 @@
       </div>
 
       <!-- Bento Grid Right -->
-  <!--     <div class="col-lg-5">
+<!--       <div class="col-lg-5">
         <div class="bento-card shadow rounded-4 overflow-hidden h-100">
           <img 
             src="https://www.dineandpack.com.ng/forms/sep7-11.jpg"
@@ -662,9 +724,9 @@
           <div class="col-md-6 text-center text-md-start">
             <p class="mb-0">&copy; 2023 Project100. All rights reserved.</p>
           </div>
-          <div class="col-md-6 text-center text-md-end">
+         <!--  <div class="col-md-6 text-center text-md-end">
             <p class="mb-0">A CSR initiative of <a href="https://www.dineandpack.com.ng/" class="text-white">Dine & Pack</a></p>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
